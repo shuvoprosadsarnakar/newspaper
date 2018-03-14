@@ -9,87 +9,49 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="{{URL::asset('css/style.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{URL::asset('css/fontawesome-all.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{URL::asset('css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+    
 
         <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
+       
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
+    <div class="first-header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class=col-md-4>
+          <img src="{{URL::asset('images/bglogo.png')}}" height=65px style="padding-left:20px">
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
         </div>
+        <div class="col-md-8 ">
+         <h7 id="search">SEARCH HERE</h7> 
+          <div class="search-wrapper">
+            <div class="input-holder">
+                <input type="text" class="search-input" placeholder="Type what you want to search" />
+                <button class="search-icon" onclick="searchToggle(this, event);"><span></span></span>
+                  <i class="fa fa-search searchbar"></i>
+                </button>
+            </div>
+            <span class="close" onclick="searchToggle(this, event);"></span>
+        </div>
+        </div>
+      </div>
+      </div>
+      </div>
+     <dv class="second-header">
+
+     </dv>
+
+         
+
+        <script type="text/javascript" src="{{URL::asset('js/main.js')}}"></script>
+        <script type="text/javascript" src="{{URL::asset('js/jquery.min.js')}}"></script>
+        <script type="text/javascript" src="{{URL::asset('js/popper.min.js')}}"></script>
+        <script type="text/javascript" src="{{URL::asset('js/bootstrap.min.js')}}"></script>
     </body>
+
 </html>
+
+
