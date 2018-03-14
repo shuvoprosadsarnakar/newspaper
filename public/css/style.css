@@ -7,11 +7,19 @@
    
    
 }
+
+.location-time{
+    padding-left:20px;
+    padding-top:10px;
+}
 #search{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size:14px;
     padding-left:680px;
-  
+ 
+}
+.search-text{
+    padding-top:20px;
 }
 .search-wrapper {
    /* position: absolute;
@@ -19,7 +27,7 @@
     left:680px;*/
     position: absolute;
     transform: translate(-100%, -0%);
-    top:35%;
+top:35%;
     left:84%;
 }
 .search-wrapper .input-holder {    

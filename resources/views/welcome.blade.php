@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,10 +23,15 @@
       <div class="row">
         <div class=col-md-4>
           <img src="{{URL::asset('images/bglogo.png')}}" height=65px style="padding-left:20px">
-
+          <div class="location-time">
+          <p><img src="{{URL::asset('images/location.png')}}" height=17px > Dhaka, Wednesday, 14th March 2018, Summer</p>
+          </div>
         </div>
+  
         <div class="col-md-8 ">
-         <h7 id="search">SEARCH HERE</h7> 
+          <div class="search-text">
+         <h7 id="search">SEARCH HERE</h7>
+        </div>
           <div class="search-wrapper">
             <div class="input-holder">
                 <input type="text" class="search-input" placeholder="Type what you want to search" />
@@ -37,12 +42,14 @@
             <span class="close" onclick="searchToggle(this, event);"></span>
         </div>
         </div>
+        </div>
       </div>
       </div>
       </div>
-     <dv class="second-header">
+     <div class="second-header">
+       
 
-     </dv>
+     </div>
 
          
 
