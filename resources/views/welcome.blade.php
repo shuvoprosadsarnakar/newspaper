@@ -31,7 +31,7 @@
           </div>
         </div>
   
-        <div class="col-md-7 ">
+        <div class="col-md-8 ">
           <div class="search-text">
             <h7 id="search">SEARCH HERE</h7>
           </div>
@@ -48,20 +48,11 @@
           </div>
         </div>
         </div>
-        <div class=col-md-1>
-        <div class="login dropdown">
-    <span><img src="images/logo.png" height="35px", width="35px"></span>
-    <div class="dropdown-content">
-        <a href="">Login</a>
-          <a href="">Registration</a>
-      </div>
-      </div>
-        </div>
         </div>
       </div>
      
       </div>
-      
+      </div>
      <div class="second-header">
        
      <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
@@ -280,14 +271,8 @@
         </ul>
       </li>
           </ul>
-          
-     
-      </div>
-
         </div>
-
       </nav>
-
      </div>
    
          

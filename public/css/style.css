@@ -28,8 +28,8 @@
     left:680px;*/
     position: absolute;
     transform: translate(-100%, -0%);
- top:35%;
-    left:95%;
+top:35%;
+    left:84%;
 }
 .search-wrapper .input-holder {    
     height: 50px;
@@ -136,24 +136,6 @@ margin-top:1px;
     color:black;
  
 }
-.login{
-    background-color:white;
-     background-position: center;
-     height:35px;
-     width:35px;
-     border-radius: 18px;
- }
- .dropdown-content {
-     display: none;
-     position: absolute;
-     background-color: #f9f9f9;
-     min-width: 160px;
-     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-     padding: 12px 16px;
-   
- }
- 
- 
 /*navvar dropdown*/
 
   .navbar-custom{
@@ -185,7 +167,6 @@ margin-top:1px;
         width: auto;
     }
 }
-
 @media (max-width: 62em) {
 
   
