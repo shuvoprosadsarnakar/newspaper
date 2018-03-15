@@ -31,7 +31,7 @@
           </div>
         </div>
   
-        <div class="col-md-8 ">
+        <div class="col-md-7 ">
           <div class="search-text">
             <h7 id="search">SEARCH HERE</h7>
           </div>
@@ -47,6 +47,9 @@
             <span class="close" onclick="searchToggle(this, event);"></span>
           </div>
         </div>
+        <div class=col-md-1>
+          
+      </div>
         </div>
         </div>
       </div>
