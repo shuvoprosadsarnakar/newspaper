@@ -48,7 +48,8 @@
           </div>
         </div>
         <div class=col-md-1>
-          
+          <a href="" class="text-color-black">Login</a> 
+          <a href="" class="text-color-black">Registration</a>
       </div>
         </div>
         </div>
