@@ -30,8 +30,8 @@
               <img src="{{URL::asset('images/location.png')}}" height=17px> Dhaka, Wednesday, 14th March 2018, Summer</p>
           </div>
         </div>
-
-        <div class="col-md-8 ">
+  
+        <div class="col-md-7 ">
           <div class="search-text">
             <h7 id="search">SEARCH HERE</h7>
           </div>
@@ -47,21 +47,35 @@
             <span class="close" onclick="searchToggle(this, event);"></span>
           </div>
         </div>
+        </div>
+        <div class=col-md-1>
+        <div class="login dropdown">
+    <span><img src="images/logo.png" height="35px", width="35px"></span>
+    <div class="dropdown-content">
+        <a href="">Login</a>
+          <a href="">Registration</a>
       </div>
-    </div>
-
-  </div>
-  </div>
-  <div class="second-header">
-
-    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="#">
-          <i class="fas fa-home"></i>
+      </div>
+        </div>
+        </div>
+      </div>
+     
+      </div>
+      
+     <div class="second-header">
+       
+     <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="#"><i class="fas fa-home"></i></a>
+          
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          
+            <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Bangladesh
         </a>
 
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -264,9 +278,19 @@
             </ul>
           </li>
         </ul>
+      </li>
+          </ul>
+          
+     
       </div>
-    </nav>
-  </div>
+
+        </div>
+
+      </nav>
+
+     </div>
+   
+         
 
 
 
