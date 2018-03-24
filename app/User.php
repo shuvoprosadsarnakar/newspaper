@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends \TCG\Voyager\Models\User
 {
     use Notifiable;
 
@@ -30,8 +30,5 @@ class User extends Authenticatable
     public function roles()
     {
         return $this->belongsToMany('App/Role','user_role','user_id','role_id');
-    }
-}
-
     }
 }
