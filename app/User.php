@@ -27,8 +27,9 @@ class User extends \TCG\Voyager\Models\User
         'password', 'remember_token',
     ];
 
-    public function roles()
-    {
-        return $this->belongsToMany('App/Role','user_role','user_id','role_id');
+    public function news(){
+        return $this->hasMany('App\News','id','user_id');
     }
+    
+
 }

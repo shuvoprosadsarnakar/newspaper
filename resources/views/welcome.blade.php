@@ -180,10 +180,16 @@
       </nav>
      </div>
 
-         
+     <div>
+      @foreach ($news as $news_s)
+        <p>news title {{ $news_s->title }}</p>
+        <p>news body {{ $news_s->description }}</p>
+        <p>news category {{ $news_s->news_categories->category_name }}</p>
+        <p>news user {{ $news_s->users->name }}</p>
+      @endforeach
+     </div>
 
-
-
+        
   <script type="text/javascript" src="{{URL::asset('js/main.js')}}"></script>
   <script type="text/javascript" src="{{URL::asset('js/jquery.min.js')}}"></script>
   <script type="text/javascript" src="{{URL::asset('js/popper.min.js')}}"></script>
