@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\News;
+use App\Tag;
 
 class HomeController extends Controller
 {
@@ -12,10 +13,11 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Show the application dashboard.
@@ -27,6 +29,7 @@ class HomeController extends Controller
         $news = News::with('news_categories','users')
                        ->take(10)
                        ->get();
-        return view('welcome', ['news' => $news]);
+        $tags = Tag::all();
+        return view('welcome', ['news' => $news,'tags'=>$tags]);
     }
 }

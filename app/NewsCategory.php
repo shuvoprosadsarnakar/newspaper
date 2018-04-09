@@ -11,4 +11,5 @@ class NewsCategory extends Model
     public function news(){
         return $this->hasMany('App\News','id','newscategory_id');
     }
+    
 }

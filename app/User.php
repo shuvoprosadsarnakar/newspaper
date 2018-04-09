@@ -31,5 +31,8 @@ class User extends \TCG\Voyager\Models\User
         return $this->hasMany('App\News','id','user_id');
     }
     
+    public function newscomment(){
+        return $this->hasMany('App\NewsComment','id','user_id');
+    }
 
 }

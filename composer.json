@@ -12,7 +12,6 @@
         "fideloper/proxy": "~4.0",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
-        "rtconner/laravel-tagging": "~2.2",
         "tcg/voyager": "^1.0",
         "test-hook": "^1.0"
     },
