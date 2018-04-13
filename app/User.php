@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends \TCG\Voyager\Models\User
 {
     use Notifiable;
 
@@ -26,4 +26,13 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function news(){
+        return $this->hasMany('App\News','id','user_id');
+    }
+    
+    public function newscomment(){
+        return $this->hasMany('App\NewsComment','id','user_id');
+    }
+
 }

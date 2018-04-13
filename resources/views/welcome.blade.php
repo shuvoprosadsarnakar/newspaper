@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Laravel</title>
+  <title></title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -20,6 +20,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
   <div class="first-header">
     <div class="container-fluid">
       <div class="row">
@@ -181,8 +182,22 @@
 
          
 
+=======
+>>>>>>> 40fa282e77d7e5e72849bfb9baf05087299a5093
 
+     <div>
+      @foreach ($news as $news_s)
+        <p>news title {{ $news_s->title }}</p>
+        <p>news body {{ $news_s->description }}</p>
+        <p>news category {{ $news_s->news_categories->category_name }}</p>
+        <p>news user {{ $news_s->users->name }}</p>
+      @endforeach
+     </div>
+     @foreach($tags as $tag)
+    <p>tag = {{$tag->tag}}</p>
+     @endforeach
 
+        
   <script type="text/javascript" src="{{URL::asset('js/main.js')}}"></script>
   <script type="text/javascript" src="{{URL::asset('js/jquery.min.js')}}"></script>
   <script type="text/javascript" src="{{URL::asset('js/popper.min.js')}}"></script>
