@@ -4,13 +4,25 @@
 @section('content')
 <div class="first-portion">
     <div class="container">
+
+        <div>
+            {{-- @foreach ($news as $news_s)
+              <p>news title {{ $news_s->title }}</p>
+              <p>news body {{ $news_s->description }}</p>
+              <p>news category {{ $news_s->news_categories->category_name }}</p>
+              <p>news user {{ $news_s->users->name }}</p>
+            @endforeach
+           </div>
+           @foreach($tags as $tag)
+          <p>tag = {{$tag->tag}}</p>
+           @endforeach --}}
       <div class="row">
         <div class="col-md-8 col-12">
           <!-- image and text over image postion-->
           <div class="inner">
             <div class="news-img">
               <a href="">
-                <img src="http://via.placeholder.com/749x400">
+                <img src="{{'http://newspaper.com/storage/'+$news[1]->image}}">
               </a>
             </div>
             <div class="news-content">
