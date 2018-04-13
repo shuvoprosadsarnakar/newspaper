@@ -66,7 +66,7 @@
           
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           
-            <li class="nav-item dropdown">
+            <li class="nav-item active dropdown">
         <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Bangladesh
         </a>
@@ -81,7 +81,7 @@
           </li>
         </ul>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item ">
               <a class="nav-link" href="#">Deshjure <span class="sr-only">(current)</span></a>
             </li>
       <li class="nav-item dropdown">
@@ -143,13 +143,13 @@
           <li><a class="dropdown-item" href="#">krisi and life</a></li>
         </ul>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item ">
               <a class="nav-link" href="#">Vedio <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item ">
               <a class="nav-link" href="#">Job <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item ">
               <a class="nav-link" href="#">E-paper <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
