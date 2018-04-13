@@ -13,6 +13,10 @@
 
 Route::get('/', 'HomeController@index');
 
+Route::get('/categories', 'HomeController@index');
+
+Route::get('/categories/news', 'HomeController@index');
+
 Auth::routes();
 
 Route::group(['prefix' => 'admin'], function () {

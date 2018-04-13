@@ -564,13 +564,8 @@ padding-left: 20px;
    
 }
 
-<<<<<<< HEAD
-.title:before {
-    content : "";
-=======
 .dropdown-submenu a::after{
     transform: rotate(-90deg);
->>>>>>> ecd9d6fa371f51d5fce5c3756f7a9720675b8063
     position: absolute;
     left:0;
     z-index: 100;
