@@ -105,39 +105,52 @@ img {
     font-size: 13px;
     padding: 5px 13px 5px 13px;
   }
- .menu-top{
-    margin-top: 20px;
- }
- .vertical-ul  li{
-     border-bottom: 1px solid rgba(255,255,255,0.05);
-     padding: 1.4375rem ;
- }
- .vertical-ul li a{
-     padding-left: 25px;
+  /* start menu category list*/
+  .vertical-submenu{
+    position: relative;
+}
+.vertical-submenu li{
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: block;  
+    padding: 1.4375rem 1rem;
+}
+.vertical-submenulist li a{
+   color: rgb(245, 81, 82);
+   margin-left: 17px;
     font-family: 'Merriweather',Georgia,Serif;
-    font-size: 17px;
+    font-size: 0.9375rem;
     font-weight: 900;
-    line-height: 1;
-    color:rgb(245, 81, 82);
-  
- }
- .side-menu{
-     position: relative;
- }
- .submenu-parent>a:after{
-    content: '+';
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    width: 40px;
+    line-height: 1; 
+}
+.menu-item {
+    position: relative;
+}
+ .submenu-parent{
+     cursor: pointer;
+     color:rgb(245, 81, 82);
+     font-size:20px;
+     position:absolute;
+     right:0px;
+     top:5px;
+     width: 40px;
     height: 60px;
-    margin-top: 0;
     border: none;
     line-height: 60px;
     text-align: center;
     border-left: 1px solid rgba(255,255,255,0.05);
+    
  }
+ .nested-submenu {
+    background-color: #202022;
+    display: none;
+ }
+ .nested-submenu  li a{
+    font-family: 'Open Sans',Arial,Helvetica,Sans-Serif;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    padding-left: 1.875rem;
+ }
+ /*end menu category list*/
 /*end menu*/
 /*start first-header*/
 
@@ -310,13 +323,13 @@ img {
 /* start-search bar style*/
 
 .search-bar {
-    width: 365px;
+    width:320px;
     top: 8px;
     position: relative;
 }
 
 .search-bar input#search {
-    width: 352px;
+   width:300px;
     height: 35px;
     border: 1px solid rgb(242, 242, 242);
     font-size: 16px;
@@ -328,7 +341,7 @@ img {
 
 .search-bar .icon {
     position: absolute;
-    right: 24px;
+    right: 35px;
     top: 6px;
     font-size: 14px;
     z-index: 1;
@@ -874,7 +887,7 @@ form.example button {
 .comment-section{
    padding: 40px 0px 40px;
 }
-/*whole search*/
+/**/
 
 @media (max-width: 576px) {
     .header{
@@ -892,6 +905,12 @@ form.example button {
     .news-content {
         bottom: 20px;
     }
+    .email-text {
+       font-size: 17px;
+    }
+    .footer .social-icon {
+        margin-left: 60px;
+    }
 }
 
 @media (min-width: 577px) {
@@ -904,6 +923,9 @@ form.example button {
 
 }
 
-@media (max-width: 992px) {
-    
+@media (max-width: 1024px) {
+    .nav-item {
+        font-size: 12px;
+       
+    }
 }
