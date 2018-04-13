@@ -30,6 +30,8 @@ class HomeController extends Controller
                        ->take(10)
                        ->get();
         $tags = Tag::all();
-        return view('welcome', ['news' => $news,'tags'=>$tags]);
+        // return view('welcome', ['news' => $news,'tags'=>$tags]);
+        return view('basa',['news' => $news,'tags' => $tags]);
+
     }
 }

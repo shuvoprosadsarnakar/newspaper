@@ -21,7 +21,7 @@ class user_table_seeder extends Seeder
         $user->email='shuvoprosad@gmail.com';
         $user->password=bcrypt('shuvo');
         $user->save();
-        $user->roles()->attach($role_user);
+        $user->roles()->attach($role_user3);
 
         $user2 = new User();
         $user2->name='antara';
@@ -35,7 +35,7 @@ class user_table_seeder extends Seeder
         $user3->email='arifin@gmail.com';
         $user3->password=bcrypt('arifin');
         $user3->save();
-        $user3->roles()->attach($role_user3);
+        $user3->roles()->attach($role_user);
 
     }
 }

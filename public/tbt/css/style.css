@@ -76,6 +76,7 @@ img {
     position: relative;
     z-index: 1;
     will-change: transform;
+    background-color: #fff;
   }
 
   .slideout-open,
@@ -888,20 +889,21 @@ form.example button {
     h5{
         font-size: 12px;
     }
+    .news-content {
+        bottom: 20px;
+    }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 577px) {
     .mobile-header{
         display: none;
     }
+}
+
+@media (max-width: 768px) {
+
 }
 
 @media (max-width: 992px) {
     
-}
-
-@media (min-width: 1024px) {
-    .mobile-header{
-        display: none;
-    }
 }

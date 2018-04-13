@@ -29,10 +29,9 @@
                         @if(!is_null($dataTypeContent->getKey()))
                             {{ method_field("PUT") }}
                         @endif
-
                         <!-- CSRF TOKEN -->
                         {{ csrf_field() }}
-
+                        
                         <div class="panel-body">
 
                             @if (count($errors) > 0)

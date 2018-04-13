@@ -34,10 +34,10 @@
      @endforeach
 
         
-  <script type="text/javascript" src="{{URL::asset('js/main.js')}}"></script>
   <script type="text/javascript" src="{{URL::asset('js/jquery.min.js')}}"></script>
   <script type="text/javascript" src="{{URL::asset('js/popper.min.js')}}"></script>
   <script type="text/javascript" src="{{URL::asset('js/bootstrap.min.js')}}"></script>
+  <script type="text/javascript" src="{{URL::asset('js/main.js')}}"></script>
 </body>
 
 </html>

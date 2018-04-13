@@ -17,7 +17,7 @@ class CreateNewsCommentsTable extends Migration
             $table->increments('id');
             $table->text('comment');
             $table->boolean('approved');
-            $table->integer('parent_id')->unsigned();
+            $table->integer('parent_id')->nullable()->unsigned();
             $table->integer('news_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->timestamps();
