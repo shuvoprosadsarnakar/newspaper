@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Role;
+use \TCG\Voyager\Models\Role;
+use App\User;
 
 class user_table_seeder extends Seeder
 {

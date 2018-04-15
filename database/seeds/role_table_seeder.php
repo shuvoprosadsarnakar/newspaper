@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Role;
+use \TCG\Voyager\Models\Role;
 
 class role_table_seeder extends Seeder
 {
@@ -15,17 +15,17 @@ class role_table_seeder extends Seeder
         
         $role = new Role();
         $role->name = 'admin';
-        $role->description = 'sob kisu korbar pare';
+        $role->display_name = 'sob kisu korbar pare';
         $role->save();
         
         $role2 = new Role();
         $role2->name = 'user';
-        $role2->description = 'kisu e korbar pare na';
+        $role2->display_name = 'kisu e korbar pare na';
         $role2->save();
         
         $role3 = new Role();
         $role3->name = 'author';
-        $role3->description = 'kisu kisu korbar pare';
+        $role3->display_name = 'kisu kisu korbar pare';
         $role3->save();
 
 
