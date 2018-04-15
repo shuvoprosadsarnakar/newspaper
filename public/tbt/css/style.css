@@ -30,7 +30,7 @@ a:hover {
     text-align: center;
 }
 img {
-    width: 100%;
+   width: 100%;
     height: auto;
     overflow: hidden;
 }
@@ -105,6 +105,9 @@ img {
     font-size: 13px;
     padding: 5px 13px 5px 13px;
   }
+  .menu-top{
+      margin-top: 20px;
+  }
   /* start menu category list*/
   .vertical-submenu{
     position: relative;
@@ -125,30 +128,28 @@ img {
 .menu-item {
     position: relative;
 }
- .submenu-parent{
-     cursor: pointer;
-     color:rgb(245, 81, 82);
-     font-size:20px;
-     position:absolute;
-     right:0px;
-     top:5px;
-     width: 40px;
-    height: 60px;
+.custom-toggle{
+    color:rgb(245, 81, 82);
+    background-color: rgb(46, 46, 45);
     border: none;
-    line-height: 60px;
+    border-left:  1px solid rgba(255,255,255,0.05);
+    cursor: pointer;
+    position:absolute;
     text-align: center;
-    border-left: 1px solid rgba(255,255,255,0.05);
-    
+    width: 40px;
+    height: 60px;
+    right:0;
+    top:-40px;
+}
+ .custom-dropdownmenu{
+     background-color: #202022;
  }
- .nested-submenu {
-    background-color: #202022;
-    display: none;
- }
- .nested-submenu  li a{
+ .custom-dropdownmenu a{
     font-family: 'Open Sans',Arial,Helvetica,Sans-Serif;
     font-size: 0.8125rem;
     font-weight: 400;
-    padding-left: 1.875rem;
+   padding: 12px;
+   
  }
  /*end menu category list*/
 /*end menu*/
@@ -265,13 +266,13 @@ img {
     visibility: hidden;
 }
 
-.dropdown:hover .dropdown-menu {
+.custom-dropdown:hover .dropdown-menu {
     display: block;
     background-color: rgb(46, 46, 45);
     position: absolute !important;
 }
 
-.dropdown:hover {
+.custom-dropdown:hover {
     border-top: 1px solid rgb(245, 81, 82);
 }
 
@@ -730,13 +731,11 @@ padding-left: 20px;
   .owl-carousel .owl-next {
     right: 0px;
   }
-/*.owl-carousel .item{
+.owl-carousel .item{
     position: relative;
 }
- .carsol-position{
-     position: absolute;
-     top:50px;
- }*/ 
+ 
+ 
 /*carsoul testimonls end*/
 .footer{
     background-color: rgb(32, 32, 34);
@@ -888,12 +887,56 @@ form.example button {
    padding: 40px 0px 40px;
 }
 /**/
+.mblogo{
+    padding-top:15px;
+}
+/*category dropdown*/
+.menu-dropdown{
+    position: absolute;
+   margin-top: 3px;
+   font-size: 24px;
+   left: 30px;
+    height: 34px;
+    width: 34px;
+    text-align: center;
+    line-height: 34px;
+    background: rgba(0,0,0, 0.15);
+    color: #000;
+    cursor: pointer;
+}
+.menu-warp{
+    width: 66%;  
+    left:30px;
+    top: 47px;
+    box-shadow: 0px 4px 5px #000;
+    height: auto;
+    position: absolute;
+    z-index: 5;
+    background: #fff;
+}
+.secondary-menu li{
+    display: block;
+    float:none;
+    border-bottom: 1px solid #eaeaea;
+}
+.secondary-menu a {  
+    line-height: 44px;
+    padding: 0 10px;
+    font-size: 16px;
+    color: #000;
 
+}
+.ptag-text{
+    font-size: 14px;
+}
+
+/*end category menu*/
 @media (max-width: 576px) {
-    .header{
+    .header, .third-header,.menu li a,.search-bar{
         display: none;
     } 
-    h3{
+
+    h3,h2{
         font-size: 20px;
     }
     h4{
@@ -911,10 +954,18 @@ form.example button {
     .footer .social-icon {
         margin-left: 60px;
     }
+   
+    .popular-blog ,.content{
+        padding-left: 0px;
+    }
+    .comment-ptag p{
+        font-size: 14px;
+    }
+  
 }
 
 @media (min-width: 577px) {
-    .mobile-header{
+   .mobile-header, .category-submenu{
         display: none;
     }
 }

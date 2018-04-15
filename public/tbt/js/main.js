@@ -48,4 +48,7 @@ jQuery(document).ready(function($) {
       document.querySelector('.toggle-button').addEventListener('click', function() {
         slideout.toggle();
       });
+      /*jhk*/
       
+     
+   

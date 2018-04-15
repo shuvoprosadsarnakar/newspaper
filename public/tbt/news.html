@@ -20,7 +20,7 @@
 </head>
 
 <body>
-  <div class="header">
+  <!--<div class="header">
     <div class="first-header header-bottom">
       <div class="container">
         <div class="row">
@@ -89,7 +89,7 @@
       </div>
     </div>
     <!-- start menu dropdwn-->
-    <div class="second-header">
+   <!-- <div class="second-header">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-full navbar-custom ">
           <a class="navbar-brand" href="#"></a>
@@ -103,9 +103,7 @@
             <a class="navbar-brand" href="#">
               <i class="fas fa-home button-text"></i>
             </a>
-            <!--<a class="navbar-brand" href="#"></a>
-                  <a class="navbar-brand" href="#"></a>
-                  <a class="navbar-brand" href="#"></a>-->
+           
             <ul class="navbar-nav">
               <li class="nav-item active">
                 <a class="nav-link" href="#">
@@ -251,9 +249,9 @@
         </nav>
         <!--end dropdown nav-->
 
-      </div>
+      <!--</div>
     </div>
-    </div>
+    </div>-->
     <!-- start 3rd header-->
 
     <div class="innerpage-header ">
@@ -268,6 +266,35 @@
         <div class="container">
           <div class="row">
             <div class="col-md-8">
+                <div class="category-submenu">
+                    <span class="menu-dropdown">
+                      <i class="fas fa-angle-down"></i>
+                    </span>
+                    <div class="menu-warp" style="display:none;">
+                      <div id="secondary-menu" class="secondary-menu">
+                        <ul class="">
+                          <li>
+                            <a href="" class="text-color">দেশজুড়ে</a>
+                          </li>
+                          <li>
+                            <a href="" class="text-color">শিক্ষা ও সাহিত্য</a>
+                          </li>
+                          <li>
+                            <a href="" class="text-color"> অর্থ ও বাণিজ্য</a>
+                          </li>
+                          <li>
+                            <a href="" class="text-color"> ক্রিকেট</a>
+                          </li>
+                          <li>
+                            <a href="" class="text-color"> স্বাস্থ্যকথা</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+    
+                  </div>
+    
+                  <!-- end for mobile sub category-->
               <div class="topic">
 
                 <ul class="menu">
@@ -290,14 +317,16 @@
               </div>
             </div>
             <div class="col-md-4">
-              <!--<form method="" action="">
+              <form method="" action="">
               <div class="search-bar">
                 <input type="search" id="search" placeholder="Search..." />
+                <button type="submit">
                 <span class="icon">
                   <i class="fa fa-search"></i>
                 </span>
+              </button>
               </div>
-            </form>-->
+            </form>
 
             </div>
           </div>
@@ -342,7 +371,7 @@
       <div class="container">
         <!--main row-->
         <div class="row">
-          <div class="col-md-8 horizontal-border">
+          <div class="col-md-8 col-12 horizontal-border">
 
             <div class="inner">
               <div class="news-img">
@@ -360,19 +389,19 @@
             <div class="news-by">
               <div class="row">
 
-                <div class="col-md-4 horizontal-border ">
-                  <span>By</span>
-                  <div class="news-date">
+                <div class="col-md-4 col-4 horizontal-border ">
+                  <span></span>
+                  <div class="news-date mblogo">
                     নিজস্ব প্রতিবেদক
                   </div>
 
                 </div>
 
-                <div class="col-md-4 horizontal-border">
-                  <span class="news-date">প্রকাশিত</span>
-                  <div class="news-date  ">মার্চ ২২,২o১৮</div>
+                <div class="col-md-4 col-4 horizontal-border ">
+                  <span class="news-date ">প্রকাশিত</span>
+                  <div class="news-date ">মার্চ ২২,২o১৮</div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-4">
                   <span>0</span>
                   <div class="news-date  ">মন্তব্য</div>
                 </div>
@@ -442,7 +471,7 @@
               </div>
 
             </div>
-            <div class="mobile-header">
+            <div class="mobile-header mblogo morenews-bottom">
               <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -473,12 +502,12 @@
               </div>
             </div>
             <!--- comment section-->
-            
+            <div class="container">
               <div class="row">
-                <div class="col-md-3 last-portion">
+                <div class="col-md-3 col-12 last-portion">
                  <h4>মন্তব্য(0)</h4>
                 </div>
-                <div class="col-md-9 morenews-bottom comment-section ">
+                <div class="col-md-9 col-12 morenews-bottom comment-section ">
                 <span> মন্তব্য করতে</span>
                 <span> <a href="" class="logreg-button reg-color ">
                     লগইন
@@ -488,6 +517,23 @@
                 </div>
                 
               </div>
+
+            </div>
+            <!-- comment box-->
+            <div class="">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4">
+
+                  </div>
+                  <div class="col-md-8">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end comnt box-->
+            
               <!-- end commnt-->
             <!--  <div class="first-portion second-portion">
                   <div class="title ">
@@ -1241,6 +1287,14 @@
     <script src="js/noty.min.js"></script>
     <script src="js/main.js"></script>
 
+    <script type="text/javascript">
+      $('.menu-dropdown').click(function () {
+        $('.menu-warp').toggle();
+        $('.menu-dropdown').toggleClass('opened');
+      });
+      //now run horizontal menu hover helper
+      //jadewits_horizontal_hover_menu({container:'.main_menu',waittime:500});
+    </script>
 </body>
 
 </html>
