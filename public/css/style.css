@@ -30,9 +30,12 @@ a:hover {
     text-align: center;
 }
 img {
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
     overflow: hidden;
+     /*image responsive by shuvo*/
+	max-height: 360px;
+	object-fit: cover;
 }
 
 .small-img img {

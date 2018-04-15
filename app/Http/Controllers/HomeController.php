@@ -27,8 +27,8 @@ class HomeController extends Controller
     public function index()
     {
         $news = News::with('news_categories','users')
-                       ->take(10)
-                       ->get();
+                    ->take(10)
+                    ->get();
         $tags = Tag::all();
         // return view('welcome', ['news' => $news,'tags'=>$tags]);
         return view('basa',['news' => $news,'tags' => $tags]);

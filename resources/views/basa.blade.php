@@ -17,32 +17,33 @@
           <p>tag = {{$tag->tag}}</p>
            @endforeach --}}
       <div class="row">
+          @if(! empty($news))
         <div class="col-md-8 col-12">
           <!-- image and text over image postion-->
           <div class="inner">
             <div class="news-img">
               <a href="">
-                <img src="{{'http://newspaper.com/storage/'+$news[1]->image}}">
+                <img src="{{URL::asset('storage/'.$news[0]->image)}}">
               </a>
             </div>
             <div class="news-content">
               <div class="icon-bar ">
-                <a href="" class="button-text">বাংলাদেশ</a>
+                <a href="" class="button-text">
+                  {{$news[0]->news_categories->category_name}}
+                </a>
               </div>
-
               <div class="news-link">
-
                 <h3>
                   <a href="" class=" button-text">
-                    ৩০ বছর পর প্রমাণ হলো তিনি গরু পাচার করেননি গরুপাচার
+                    {{$news[0]->title}}
                   </a>
                 </h3>
-
               </div>
             </div>
           </div>
           <!-- end image and text over image postion-->
         </div>
+        @endif
 
         <div class="col-md-4 col-12">
           <div class="inner">

@@ -85,12 +85,5 @@ class newscategory extends Seeder
             
         ]);
 
-        // DB::table('news')->insert([
-
-        //     'parent_id' => 0,
-
-        //     'category_name' => "null",
-
-        // ]);
     }
 }
