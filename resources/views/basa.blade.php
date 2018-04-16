@@ -22,7 +22,7 @@
           <!-- image and text over image postion-->
           <div class="inner">
             <div class="news-img">
-              <a href="">
+              <a href="{{route('category',['id'=>$news[0]->id])}}">
                 <img src="{{URL::asset('storage/'.$news[0]->image)}}">
               </a>
             </div>
@@ -34,7 +34,7 @@
               </div>
               <div class="news-link">
                 <h3>
-                  <a href="" class=" button-text">
+                  <a href="{{route('category',['id'=>$news[0]->id])}}" class=" button-text">
                     {{$news[0]->title}}
                   </a>
                 </h3>

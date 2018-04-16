@@ -13,9 +13,20 @@
 
 Route::get('/', 'HomeController@index');
 
-Route::get('/categories', 'HomeController@index');
+Route::get('/category/{slug}', [
+    'uses'=>'NewsCategoryController@category',
+    'as'=>'category'
+]);
 
-Route::get('/categories/news', 'HomeController@index');
+Route::get('/category/news/{id}', [
+    'uses'=>'NewsCategoryController@news',
+    'as'=>'news'
+]);
+
+Route::post('/comment/create/', [
+    'uses'=>'NewsCommentController@create',
+    'as'=>'news'
+]);
 
 Auth::routes();
 
