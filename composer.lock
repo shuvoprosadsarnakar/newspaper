@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "54630ad2f2aaca7d6168b4cc714cee4d",
+    "content-hash": "9427bcc19162730c10efa3d200328836",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -1329,6 +1329,54 @@
             "time": "2015-04-20T18:58:01+00:00"
         },
         {
+            "name": "jan-drda/laravel-google-custom-search-engine",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jdrda/laravel-google-custom-search-engine.git",
+                "reference": "d5a6814afb97b3f2e65a49828e08f7e73cbeda33"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jdrda/laravel-google-custom-search-engine/zipball/d5a6814afb97b3f2e65a49828e08f7e73cbeda33",
+                "reference": "d5a6814afb97b3f2e65a49828e08f7e73cbeda33",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": ">=5.0.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JanDrda\\LaravelGoogleCustomSearchEngine": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Drda",
+                    "email": "jdrda@outlook.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel package to get Google Custom Search results from Google Custom Search Engine API for both free and paid version.",
+            "homepage": "https://github.com/jdrda/laravel-google-custom-search-engine",
+            "keywords": [
+                "custom",
+                "engine",
+                "free",
+                "google",
+                "laravel",
+                "paid",
+                "search"
+            ],
+            "time": "2016-12-14T10:55:51+00:00"
+        },
+        {
             "name": "justinrainbow/json-schema",
             "version": "5.2.7",
             "source": {
@@ -2561,6 +2609,61 @@
                 "uuid"
             ],
             "time": "2018-01-20T00:28:24+00:00"
+        },
+        {
+            "name": "rtconner/laravel-tagging",
+            "version": "2.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rtconner/laravel-tagging.git",
+                "reference": "a945f2e7ef40ece795b5dd749b3325705420a90a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rtconner/laravel-tagging/zipball/a945f2e7ef40ece795b5dd749b3325705420a90a",
+                "reference": "a945f2e7ef40ece795b5dd749b3325705420a90a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": ">= 5.0",
+                "illuminate/support": ">= 5.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "orchestra/testbench": "~3.0",
+                "phpunit/phpunit": "~4.0",
+                "vlucas/phpdotenv": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Conner\\Tagging\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Conner",
+                    "email": "rtconner@smarter.bz"
+                }
+            ],
+            "description": "Use PHP traits to extend Laravel Eloquent Models to allow Tags. Models can be marked as Taggable.",
+            "homepage": "https://smartersoftware.net/packages/laravel-tagging-taggable",
+            "keywords": [
+                "Taggable",
+                "eloquent",
+                "laravel",
+                "laravel5",
+                "tag",
+                "tagged",
+                "tagging",
+                "tags"
+            ],
+            "time": "2017-09-06T03:49:28+00:00"
         },
         {
             "name": "seld/cli-prompt",
@@ -3815,6 +3918,63 @@
     ],
     "packages-dev": [
         {
+            "name": "actuallymab/laravel-comment",
+            "version": "0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/actuallymab/laravel-comment.git",
+                "reference": "4b5851912db063ec9904c8a6edefe263674e2aef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/actuallymab/laravel-comment/zipball/4b5851912db063ec9904c8a6edefe263674e2aef",
+                "reference": "4b5851912db063ec9904c8a6edefe263674e2aef",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "5.5.*",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "fzaninotto/faker": "~1.4",
+                "mockery/mockery": "~0.9.0",
+                "orchestra/database": "3.5.x@dev",
+                "orchestra/testbench": "~3.5",
+                "phpunit/phpunit": "6.*",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Actuallymab\\LaravelComment\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mehmet Aydin Bahadir",
+                    "email": "mehmet.aydin.bahadir@gmail.com",
+                    "homepage": "http://www.actuallymab.me",
+                    "role": "Software Engineer"
+                }
+            ],
+            "description": "Just another comment system for laravel projects.",
+            "homepage": "https://github.com/actuallymab/laravel-comment",
+            "keywords": [
+                "actuallymab",
+                "laravel-comment"
+            ],
+            "time": "2017-08-31T21:18:23+00:00"
+        },
+        {
             "name": "doctrine/instantiator",
             "version": "1.1.0",
             "source": {
@@ -4899,61 +5059,6 @@
                 "xunit"
             ],
             "time": "2018-02-15T05:27:38+00:00"
-        },
-        {
-            "name": "rtconner/laravel-tagging",
-            "version": "2.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rtconner/laravel-tagging.git",
-                "reference": "a945f2e7ef40ece795b5dd749b3325705420a90a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rtconner/laravel-tagging/zipball/a945f2e7ef40ece795b5dd749b3325705420a90a",
-                "reference": "a945f2e7ef40ece795b5dd749b3325705420a90a",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/database": ">= 5.0",
-                "illuminate/support": ">= 5.0",
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9",
-                "orchestra/testbench": "~3.0",
-                "phpunit/phpunit": "~4.0",
-                "vlucas/phpdotenv": "~2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Conner\\Tagging\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Robert Conner",
-                    "email": "rtconner@smarter.bz"
-                }
-            ],
-            "description": "Use PHP traits to extend Laravel Eloquent Models to allow Tags. Models can be marked as Taggable.",
-            "homepage": "https://smartersoftware.net/packages/laravel-tagging-taggable",
-            "keywords": [
-                "Taggable",
-                "eloquent",
-                "laravel",
-                "laravel5",
-                "tag",
-                "tagged",
-                "tagging",
-                "tags"
-            ],
-            "time": "2017-09-06T03:49:28+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",

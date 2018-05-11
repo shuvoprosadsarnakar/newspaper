@@ -9,33 +9,42 @@ $('.backto-top').click(function(){
     $('body,html').animate({scrollTop:0},800);
 })
 /*carsol*/
-jQuery(document).ready(function($) {
-    "use strict";
-    $('#customers-testimonials').owlCarousel( {
-            loop: true,
-            center: true,
-            items: 3,
-            margin: 30,
-            autoplay: true,
-            dots:true,
-        nav:true,
-            autoplayTimeout: 8500,
-            smartSpeed: 450,
-          navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
-           responsive: {
-                0: {
-                    items: 1
-                },
-                768: {
-                    items: 2
-                },
-                1170: {
-                    items: 3
-                }
-            }
+      
+$('.menu-dropdown').click(function () {
+    $('.menu-warp').toggle();
+    $('.menu-dropdown').toggleClass('opened');
+  });
+  //now run horizontal menu hover helper
+  //jadewits_horizontal_hover_menu({container:'.main_menu',waittime:500});
+  function tab(el){
+    el.find("ul").each(function(){
+        var $active, $content;
+        var $links = $(this).find("a");
+                
+        $active = $($links.filter('[href="' + location.hash + '"]')[0] || $links[0]);
+        $active.addClass("active");
+                
+        $content = $($active[0].hash);
+        $content.fadeIn("fast");
+                
+        $links.not($active).each(function () {
+            $(this.hash).hide();
         });
-    });
-
+                
+        $(this).on('click', 'a', function(i){
+            $active.removeClass('active');
+            $content.hide();
+            $active = $(this);
+            $content = $(this.hash);
+            $active.addClass('active');
+            $content.fadeIn("fast");
+            i.preventDefault();
+        });				
+    });			
+}
+$(document).ready(function(){
+    tab($(".tab-menu"));
+});
     /*menu*/
     var slideout = new Slideout({
         'panel': document.getElementById('panel'),
@@ -48,4 +57,10 @@ jQuery(document).ready(function($) {
       document.querySelector('.toggle-button').addEventListener('click', function() {
         slideout.toggle();
       });
+      /*jhk*/
       
+     
+
+	
+	
+   

@@ -1,6 +1,7 @@
 @extends('voyager::master')
 
 @section('css')
+<link rel="stylesheet" href="{{ asset('css/selectize.css') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 @stop
 
@@ -74,7 +75,23 @@
                                     </div>
                                 @endif
                             @endforeach
-
+                            <!-- Tags input  -->
+                            <div class="form-group">
+                                    <label for="name">Tags</label>
+                                    <input type="text" name="tags" id="tags">
+                            </div> 
+                            <div class="form-group">
+                                <label for=""> Existing Tags</label>
+                                @if(!$existingtags==null)
+                                @if(!$existingtags->isEmpty())
+                                    @foreach ($existingtags as $tag)
+                                        <h5>{{$tag}}</h5>
+                                    @endforeach
+                                @endif
+                                @endif
+                        </div> 
+                                 
+        
                         </div><!-- panel-body -->
 
                         <div class="panel-footer">
@@ -122,6 +139,33 @@
 @stop
 
 @section('javascript')
+
+<script src="{{ asset('js/selectize.js') }}"></script>
+<script>
+    var tags = [
+        @foreach ($tags as $tag)
+            {tag: "{{$tag}}" },
+        @endforeach
+    ];    
+
+$('document').ready(function() {
+    var $select = $('#tags').selectize({
+        delimiter: ',',
+        persist: false,
+        valueField: 'tag',
+        labelField: 'tag',
+        searchField: 'tag',
+        options: tags,
+        create: function(input) {
+            return {
+                tag: input
+            }
+        }
+    });
+
+});
+
+</script>
     <script>
         var params = {}
         var $image

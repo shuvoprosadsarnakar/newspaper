@@ -30,7 +30,7 @@
       @endforeach
      </div>
      @foreach($tags as $tag)
-    <p>tag = {{$tag->tag}}</p>
+    <p>tag = {{$tag}}</p>
      @endforeach
 
         

@@ -13,13 +13,9 @@ class NewsCategory extends Model
     }
 
     // get the parent category
-    public function parent(){
+    public function parentId(){
         return $this->belongsTo('App\NewsCategory','parent_id','id');
     }
 
-    // get the child category or sub sub sub category
-    public function child(){
-        return $this->hasMany('App\NewsCategory','id','parent_id');
-    }
     
 }

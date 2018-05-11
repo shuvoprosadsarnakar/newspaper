@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\News;
-use App\Tag;
 
 class HomeController extends Controller
 {
@@ -26,12 +25,35 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $news = News::with('news_categories','users')
-                    ->take(10)
+                            //->whereDate('date','<=',$ldate)
+        $ldate = date('Y-m-d');
+        $news = News::with('news_categories','tagged')
+                    ->take(6)
                     ->get();
-        $tags = Tag::all();
-        // return view('welcome', ['news' => $news,'tags'=>$tags]);
-        return view('basa',['news' => $news,'tags' => $tags]);
+
+        $popularnews = News::with('news_categories','tagged')
+                            ->take(8)
+                            ->get();
+
+        // getting the simillar news
+        $simillar = News::with('news_categories')
+                        ->take(8)
+                        ->get();
+
+        // getting the latest news
+        $latest = News::with('news_categories')
+                        ->take(8)
+                        ->get();
+        
+        // getting random news 
+        $random_news = News::with('news_categories','tagged')
+                        ->take(6)
+                        ->get();
+
+        $tags = News::existingTags()->pluck('name');
+ 
+        //dd($news);
+        return view('landing', compact('news','tags','popularnews','random_news'));
 
     }
 }

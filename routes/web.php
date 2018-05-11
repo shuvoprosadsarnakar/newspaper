@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', [
+    'uses'=>'HomeController@index',
+    'as'=>'home'
+]);
 
-Route::get('/category/{slug}', [
+Route::get('/category/{id}', [
     'uses'=>'NewsCategoryController@category',
     'as'=>'category'
 ]);
@@ -23,9 +26,9 @@ Route::get('/category/news/{id}', [
     'as'=>'news'
 ]);
 
-Route::post('/comment/create/', [
-    'uses'=>'NewsCommentController@create',
-    'as'=>'news'
+Route::get('/search', [
+    'uses'=>'NewsCategoryController@searchresult',
+    'as'=>'searchresult'
 ]);
 
 Auth::routes();

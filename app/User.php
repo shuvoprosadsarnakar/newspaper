@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends \TCG\Voyager\Models\User
 {
     use Notifiable;
-
+    
     /**
      * The attributes that are mass assignable.
      *
@@ -29,10 +29,6 @@ class User extends \TCG\Voyager\Models\User
 
     public function news(){
         return $this->hasMany('App\News','id','user_id');
-    }
-    
-    public function newscomment(){
-        return $this->hasMany('App\NewsComment','id','user_id');
     }
 
 }
