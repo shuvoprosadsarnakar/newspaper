@@ -32,17 +32,17 @@ class HomeController extends Controller
                     ->get();
 
         $popularnews = News::with('news_categories','tagged')
-                            ->take(8)
+                            ->take(6)
                             ->get();
 
         // getting the simillar news
-        $simillar = News::with('news_categories')
-                        ->take(8)
+        $motamotnews = News::with('news_categories','tagged')
+                        ->take(4)
                         ->get();
 
         // getting the latest news
-        $latest = News::with('news_categories')
-                        ->take(8)
+        $latestnews = News::with('news_categories','tagged')
+                        ->take(6)
                         ->get();
         
         // getting random news 
@@ -50,10 +50,19 @@ class HomeController extends Controller
                         ->take(6)
                         ->get();
 
-        $tags = News::existingTags()->pluck('name');
+        $binodon_news = News::with('news_categories','tagged')
+                        ->take(8)
+                        ->get();
+
+        $uchosikha_news = News::with('news_categories','tagged')
+                        ->orderBy('id', 'DESC')
+                        ->take(6)
+                        ->get();
+
+        //$tags = News::existingTags()->pluck('name');
  
         //dd($news);
-        return view('landing', compact('news','tags','popularnews','random_news'));
+        return view('landing', compact('news','tags','popularnews','latestnews','random_news','motamotnews','binodon_news','uchosikha_news'));
 
     }
 }

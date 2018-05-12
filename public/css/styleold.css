@@ -1,10 +1,17 @@
 
+
+@font-face {
+    font-family: 'SolaimanLipi';
+    src:url('SolaimanLipi.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
 body,
 #panel {
     background-color: #eee;
     font-family: 'SolaimanLipi', sans-serif;
 }
-
+.boxdropshadow{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 * {
     margin: 0;
     padding: 0;
@@ -42,7 +49,7 @@ img {
     height: auto;
     overflow: hidden;
     object-fit: cover;
- 
+    max-height: 400px;
 }
 
 .button-text {
@@ -177,7 +184,7 @@ img {
 
 .first-header {
     height: 72px;
-    background-color: #1b1e21;
+    background-color: rgb(46, 46, 45);
 }
 
 .header-bottom {
@@ -253,7 +260,7 @@ img {
 
 .second-header {
     height: 72px;
-    background-color: #1b1e21;
+    background-color: rgb(46, 46, 45);
 }
 
 /*dropdown menu start*/
@@ -263,8 +270,8 @@ img {
 }
 
 .nav-item {
-    font-size: 15.5px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 900;
     padding: 15px 0 14px 0px;
 }
 
@@ -274,7 +281,6 @@ img {
 
 .dropdown-item {
     color: rgb(245, 81, 82);
-    font-size: 17px;
 }
 
 .dropdown-submenu a::after {
@@ -331,7 +337,6 @@ img {
 .topic h5 {
     font-weight: 700;
     padding: 12px 20px 0 0;
-    font-size:18px;
 }
 
 .menu li {
@@ -341,7 +346,7 @@ img {
 
 .menu li a {
     color: gray;
-    font-size: 14.5px;
+    font-size: 13px;
     font-weight: 900;
     padding: 18px 12px;
 }
@@ -455,18 +460,17 @@ button:focus,
 }
 
 .news-link h3 {
-    font-size:28.8px;
+    font-size: 1.6em;
     margin: 0 0 15px;
     line-height: 40px;
+    font-family: SolaimanLipi;
 }
 
-.news-link p {
-    font-size: 15.2px;
-   
+.news-link p, .catnews-link p {
+    font-size: .93em;
+    font-family: SolaimanLipi;
 }
-.catnews-link p{
-    font-size: 17px;
-}
+
 .category-tag {
     position: absolute;
     width: 100%;
@@ -479,7 +483,7 @@ button:focus,
 
 .category-tag span,
 .tags {
-    font-size: 12px;
+    font-size: 10px;
     color: #868686;
 }
 
@@ -502,7 +506,7 @@ button:focus,
 }
 .news-link h4 {
     margin: 0 0 5px 0;
-    font-size: 16.5px;
+    font-size: .93em;
     line-height: 26px;
 
    /* padding-bottom: 35px;*/
@@ -516,6 +520,7 @@ button:focus,
     /*height: 225px;*/
     /* box drop shadow by shuvo */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .motamot h2{
@@ -541,7 +546,7 @@ button:focus,
     margin-top: 0;
     margin-bottom: 5px;
     line-height: 22px;
-    font-size: 14.5px;
+    font-size: .9em;
 }
 .fixing-div .div-padding .media-object {
     width: 105px!important;
@@ -562,7 +567,6 @@ button:focus,
 .gap-rowtopbottom{
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 20px;
 }
 .gap-rowbottom{
     padding-bottom: 20px;
@@ -599,10 +603,13 @@ ul{
     color: #000;
     display: block;
     padding: 8px 15px;
-    font-size: 19px;
+    font-size: 17px;
     text-decoration: none
    
   }
+  .multitab-section.tab {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
  
   .multitab-tab {
     width: 49.8%;
@@ -687,7 +694,7 @@ ul{
     color: #a2a2a2;
 }
 .media .news-body .tabnews-heading {
-    font-size: 14.5px;
+    font-size: 0.90em;
     line-height: 1.35;
 }
 .allnews a {
@@ -818,7 +825,7 @@ ul{
     color: #ffafaf;
 }
 .deshjure-padding .media h4 {
-    font-size: 14.5px;
+    font-size: 14px;
 }
 .deshjure-padding .media i{
     font-size:10px;
@@ -852,7 +859,7 @@ ul{
 .boldfont-size h4{
     font-weight: bold;
     line-height: 20px;
-    font-size:13.6px;
+    font-size:.90em;
     margin-bottom: 0;
 
 } 
@@ -862,19 +869,18 @@ ul{
 
 .vertical-category .media a{
     color:rgba(46, 46, 45,0.8);
-    font-size: 13.6px;
+    font-size: .88em;
 }
-
-
 .vertical-category .media{
     border-top: 1px dashed gray;
-    padding: 10px 5px 5px 10px;
+margin-bottom: 5px;
+    padding: 10px 5px 0px 10px;
     overflow: hidden;
-    margin-bottom: 0px;
 
 }
-
-
+.vertical-category .media:last-child{
+    margin-bottom: 0px;
+}
 /*end single category div*/
 /*sakhatkar*/
 .news-div .person{
@@ -940,16 +946,6 @@ ul{
 }
 
 
-/*.zoom-icon{
-    position: absolute;
-    top:0px;
-    right: 0px;
-    font-size: 20px;
-    color: #fff;
-    padding: 10px 15px;
-    background: rgba(0,0,0,0.6);
-}*/
-
 /*back to top*/
 
 .backto-top {
@@ -978,14 +974,13 @@ ul{
 /*carsoul testimonls end*/
 
 .footer {
-    background-color: #1b1e21;
+    background-color: rgb(32, 32, 34);
     padding-bottom: 30px;
 }
 
 .footer-nav h2 {
     color: #696969;
-    font-size: 1.45rem;
-    margin-bottom: 20px;
+    font-size: 1.25rem;
 }
 
 .vertical-menu li {
@@ -995,17 +990,30 @@ ul{
 
 .vertical-menu li a {
     display: block;
-    padding: 0.7rem 1rem 0.7rem 0;
+    padding: 0.7rem 1rem;
     line-height: 1;
     color: #696969;
-}
-.vertical-menu li a:hover{
-    color: rgb(245, 81, 82);
 }
 
 /* for subscribe*/
 
+.subscribe-text {
+    float: left;
+    padding: 12px;
+    font-size: 17px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.02);
+}
 
+form.example input[type=text] {
+    width: 60%;
+}
+
+form.example button {
+    width: 30%;
+    border-left: none;
+    cursor: pointer;
+}
 
 .footer .social-icon {
     margin-top: 10px;
@@ -1013,24 +1021,16 @@ ul{
 
 /*end subcribe*/
 
-
-.number-text{
-    color: rgb(105, 105, 105); 
+.news-img i {
+    font-size: 50px;
+    margin-right: 15px;
+    margin-top: 20px;
+    color: rgba(105, 105, 105);
 }
+
 .email-text {
     color: rgb(105, 105, 105);
     font-size: 20px;
-    margin-bottom:30px;
-}
-
-.one-email-text{
-    color: rgb(105, 105, 105);
-    font-size: 16px;  
-}
-.two-email-text{
-    margin-top:10px;
-    color:rgb(105, 105, 105);
-    font-size: 10px;
 }
 .i-color{
     color: rgb(160, 28, 54);
@@ -1039,7 +1039,7 @@ ul{
 .innerpage-header {
   
     background: #fff;
-    background-image: url(../images/back.png);
+   
     background-repeat: no-repeat;
     background-position: right;
 }
@@ -1064,7 +1064,7 @@ ul{
     
 }
 .innercat-news h3{
-    font-size:24px;
+    font-size:1.5em;
     line-height:30px;
     margin-bottom:10px
 }
@@ -1080,12 +1080,11 @@ ul{
     height: 90px;
 }
 .cat-div h4{
-    font-size:1em;
+    font-size:1.1em;
 }
 .cat-img img{
     height: 272px;
 }
-
 /* more news news*/
 #more-news{
     background: rgb(160, 28, 54);
@@ -1188,14 +1187,13 @@ ul{
     margin-bottom: 20px;
     padding: 0;
 }
-.social-icon li button{
-    color:#000;
-    border:none;
+.social-icon li button {
+    color: #000;
+    border: none;
     background: none;
     padding: 0;
 }
-
-.social-media li a i, .social-media li button i {
+.social-media li button i {
     width: 34px;
     height: 34px;
     border-radius: 100%;
@@ -1203,29 +1201,23 @@ ul{
     line-height: 34px;
    color: #fff;
 }
-.social-media a .fa-facebook-f {
+.social-media button .fa-facebook-f {
     background: #3b5998;
 }
-.social-media a .fa-twitter{
+.social-media button .fa-twitter{
     background: #00aced;
 }
-.social-media a .fa-google-plus-g{
+.social-media button .fa-google-plus-g{
     background: #d34836;
 }
 .social-media button .fa-print, .social-media button .fa-envelope {
     background: #969696;
 }
-.social-media a .fa-share-alt{
+.social-media button .fa-share-alt{
     background: #95D03A;
 }
 .singlenews-maximg img{
     max-height: 307px;
-}
-.photo-news-img{
-    height: 507px;
-}
-.photo-padding-top{
-    padding-top:10px;
 }
 .random-caption{
     padding: 0 15px;
@@ -1252,9 +1244,6 @@ ul{
     font-size: 14px;
     padding: 2px 10px;
     margin:2px 0;
-}
-.photo-news-tag {
-    margin:10px 0px 5px 0px;
 }
 .news-tags ul{
     margin: 0;
@@ -1361,87 +1350,16 @@ ul{
 .photo-divheight img{
     height: 174px;
 }
+.clickable-news{
+    padding-top: 20px;
+}
+/* ajker sob khobor dropdown*/
 
-
-/*iframe*/
-.responsive-iframe{
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; 
-    overflow: hidden;
+/* pagination */
+.pagination li {
+    padding: 10px;
+    background-color: white;
 }
-.responsive-iframe iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  /*another tag*/
-  .another-tag-link li a{
-    border-bottom: 1px dashed #797979;
-    display: block;
-    padding: 5px 0;
-    font-size:.95em;
-  }
-  /*end*/
-
-/* divison di category*/
-.division-div{
-    font-size: 22px;
-    line-height: 30px;
-    background: #dcdcdc;
-    color: #000;
-    padding: 6px 15px;
-   
-}
-.division-search-div{
-    display: flex;
-    width: 100% !important;
-    align-items: center;
-    overflow: hidden;
-
-}
-.division-fix{
-    width:30%;
-    float: left;
-    padding: 5px;
-}
-.date-group{
-    padding: 8px 8px;
-    font-size: 14px;
-    font-weight: 400;
-    color: #555;
-    text-align: center;
-    background-color: #eee;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-.date-form{
-    height: 34px;
-    padding: 6px 6px;
-    font-size: 14px;
-    color: #555;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-   
-
-}
-.another-date-form{
-   width:145px;
-}
-.allnews-div img{
-    height:95px;
-}
-.allnews-div .avobe-category{
-    left: 10px;
-}
-.time-text{
-    font-size: 12px;
-}
-
 @media (max-width: 576px) {
     .header,
     .third-header,
@@ -1457,64 +1375,21 @@ ul{
     .reduce-padding{
         margin-left: 0px;
     }
-    /*.main-div{
+    .main-div{
         min-height: 540px;
         max-height:540px;
         overflow: hidden;
-    }*/
+    }
     .main-div img{
         height:230px;
     }
-    /*.subnews-div  img {
-        height: 150px;
-    }*/
     .single-news-margin{
         margin-top: 20px;
     }
     .extend-padding{
         padding-left: 10px;
     }
-    .photo-news-img {
-        height: 200px;
-    }
-    .form-margin{
-        margin-top:10px;
-    }
-.date-form{
-    padding: 6px 44px;
-}
-.another-date-form{
-    width:295px;
-}
-.third-date-form{
-    padding: 6px 74px;
-}
-.news-link h3 {
-    font-size:23px;
-    line-height: 30px;
-}
-.news-link p {
-    font-size: 13px;
-}
-.subnews-div img, .boldfont-size img {
-    height: 170px;
-}
-/*.news-link h4{
-    font-size:14px;
-}*/
-/*.deshjure-padding .media h4 {
-    font-size: 13px;
-}
-.media .news-body .tabnews-heading {
-    font-size: 12.5px;
-   
-}*/
-}
 
-/* pagination */
-.pagination li {
-    padding: 10px;
-    background-color: white;
 }
 
 @media (min-width: 577px) {
@@ -1530,7 +1405,7 @@ ul{
 
 @media (max-width: 1024px) {
     .nav-item {
-        font-size: 13.1px;
+        font-size: 12px;
     }
     .main-div img{
         height: 230px;

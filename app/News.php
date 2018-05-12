@@ -20,4 +20,9 @@ class News extends Model
         return $this->belongsTo('App\User','user_id','id');
     }
 
+    public function upozila(){
+        return $this->belongsTo('App\Upozila','upozila_id','id');
+    }
+
 }
+

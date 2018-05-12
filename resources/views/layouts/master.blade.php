@@ -11,124 +11,138 @@
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/fontawesome-all.css') }}">
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
 
-    {{-- <link href="https://fonts.maateen.me/solaiman-lipi/font.css" rel="stylesheet"> --}}
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-9928854251233601",
-        enable_page_level_ads: true
-      });
-    </script>
-    <title>The Bangladesh Today - সত্যের সাথে সব সময়</title>
+    <title></title>
 </head>
 
 <body>
+  
+<div id="menu">
     <!--slider header menu -->
-    <div id="menu">
     <div class="site-info menu-border ">
       <img src="{{ URL::asset('images/bglogo2.png') }}">
     </div>
-    <div class="menu-border secondmenu">
-      {{-- <div class="menu-top post ">
-        <a href="{{ route('login') }}" class="button logreg-button reg-color"> লগইন</a>
-        <a href="{{ route('register') }}" class="button logreg-button reg-color"> রেজিস্টার</a>
+    <!--<div class="menu-border  secondmenu">
+      <div class="menu-top  post ">
+        <a href="" class="button logreg-button reg-color"> লগইন</a>
+        <a href="" class="button logreg-button reg-color"> রেজিস্টার</a>
    
-      </div> --}}
-
-    </div>
+      </div>
+    
+     
+    </div>-->
     <div class="mobile_menu_search">
-        @include('layouts.m_searchinput')
-    </div>
+        <form method="" action="">
+          <div class=" mobile-search">
+            <input type="search" id="search" placeholder="Search..." />
+            <button type="submit">
+            <span class="icon-one">
+              <i class="fa fa-search"></i>
+            </span>
+          </button>
+          </div>
+        </form>
+
+      </div>
+      
+
     <!-- -->
     <div class="vertical-submenu">
       <ul class="vertical-submenulist">
         <li class="menu-item ">
-          <a href=""> বাংলাদেশ</a>
+          <a href=""> Bangladesh</a>
           <div class="dropdown">
             <button type="button" class=" custom-toggle dropdown-toggle" data-toggle="dropdown">
 
             </button>
             <div class="dropdown-menu custom-dropdownmenu">
-              <a class="dropdown-item" href="">জাতীয়</a>
-              <a class="dropdown-item " href="">রাজনীতি</a>
-              <a class="dropdown-item " href="">অর্থ ও বাণিজ্য</a>
+              <a class="dropdown-item" href="">National</a>
+              <a class="dropdown-item " href="">Politics</a>
+              <a class="dropdown-item " href="">Business</a>
             </div>
           </div>
         </li>
         <li class="menu-item ">
-          <a href="">দেশজুড়ে</a>
+          <a href="">Nationwide</a>
 
         </li>
         <li class="menu-item ">
-          <a href=""> আন্তর্জাতিক</a>
+          <a href=""> International</a>
           <div class="dropdown">
             <button type="button" class=" custom-toggle dropdown-toggle" data-toggle="dropdown">
 
             </button>
             <div class="dropdown-menu custom-dropdownmenu">
-              <a class="dropdown-item" href="">সারাবিশ্ব</a>
-              <a class="dropdown-item " href="">বিস্ময়কর পৃথিবী</a>
-              <a class="dropdown-item " href="">প্রবাস খবর</a>
+              <a class="dropdown-item" href="">
+                whole world</a>
+              <a class="dropdown-item " href="">Wonderful earth</a>
+              <a class="dropdown-item " href="">Exile News</a>
             </div>
           </div>
         </li>
         <li class="menu-item ">
-          <a href=""> খেলাধুলা</a>
+          <a href=""> Sports</a>
           <div class="dropdown">
             <button type="button" class=" custom-toggle dropdown-toggle" data-toggle="dropdown">
 
             </button>
             <div class="dropdown-menu custom-dropdownmenu">
-              <a class="dropdown-item" href=""> ক্রিকেট</a>
-              <a class="dropdown-item " href="">ফুটবল</a>
-              <a class="dropdown-item " href="">অন্যান্য</a>
+              <a class="dropdown-item" href="">Cricket</a>
+              <a class="dropdown-item " href="">Footbal</a>
+              <a class="dropdown-item " href="">Others</a>
             </div>
 
           </div>
         </li>
         <li class="menu-item ">
-          <a href=""> বিনোদন</a>
+          <a href="">Entertainment</a>
           <div class="dropdown">
             <button type="button" class=" custom-toggle dropdown-toggle" data-toggle="dropdown">
 
             </button>
             <div class="dropdown-menu custom-dropdownmenu">
-              <a class="dropdown-item" href="">হলিউড</a>
-              <a class="dropdown-item " href="">বলিউড</a>
-              <a class="dropdown-item " href="">ঢালিউড</a>
-              <a class="dropdown-item " href="">টলিউড</a>
-              <a class="dropdown-item " href="">ছোট পর্দা</a>
+              <a class="dropdown-item" href="">
+                Hollywood</a>
+              <a class="dropdown-item " href="">
+                Bollywood</a>
+              <a class="dropdown-item " href="">Dhallywood</a>
+              <a class="dropdown-item " href="">
+                Tollywood</a>
+              <a class="dropdown-item " href="">Small Screen</a>
             </div>
           </div>
         </li>
         <li class="menu-item ">
-          <a href=""> শিক্ষাঙ্গন</a>
+          <a href="">Education</a>
           <div class="dropdown">
             <button type="button" class=" custom-toggle dropdown-toggle" data-toggle="dropdown">
 
             </button>
             <div class="dropdown-menu custom-dropdownmenu">
-              <a class="dropdown-item" href="">শিক্ষা ও সাহিত্য</a>
-              <a class="dropdown-item " href="">ক্যাম্পাস নিউজ</a>
-              <a class="dropdown-item " href="">উচ্চশিক্ষা</a>
-              <a class="dropdown-item " href="">ফলাফল</a>
+              <a class="dropdown-item" href="">
+                Education Literature</a>
+              <a class="dropdown-item " href="">Campus News</a>
+              <a class="dropdown-item " href="">
+                Higher education</a>
+              <a class="dropdown-item " href="">Results</a>
             </div>
           </div>
         </li>
         <li class="menu-item ">
-          <a href=""> ফিচার</a>
+          <a href=""> Features</a>
           <div class="dropdown">
             <button type="button" class=" custom-toggle dropdown-toggle" data-toggle="dropdown">
             </button>
             
             <div class="dropdown-menu custom-dropdownmenu">
-                <a class="dropdown-item" href="">জীবনশৈলী</a>
-                <a class="dropdown-item " href=""> রাশিফল</a>
-                <a class="dropdown-item " href=""> স্বাস্থ্যকথা</a>
-                <a class="dropdown-item " href=""> ভ্রমণ</a>
-                <a class="dropdown-item " href=""> ধর্ম ও জীবন</a>
-                <a class="dropdown-item " href="">কৃষি ও জীবন</a>
+                <a class="dropdown-item" href="">Lifestyle</a>
+                <a class="dropdown-item " href=""> Horoscope</a>
+                <a class="dropdown-item " href=""> Health</a>
+                <a class="dropdown-item " href=""> Travel</a>
+                <a class="dropdown-item " href=""> Religion and life</a>
+                <a class="dropdown-item " href="">
+                  Agriculture and life</a>
               </div>
 
             </div>
@@ -136,49 +150,43 @@
         </li>
 
         <li class="menu-item ">
-          <a href="">ফটো গ্যালারি</a>
+          <a href="">Photo Gallery</a>
 
         </li>
+
         <li class="menu-item ">
-          <a href="">ভিডিও</a>
+          <a href="">Jobs</a>
 
         </li>
-        <li class="menu-item ">
-          <a href="">চাকরি</a>
-
-        </li>
-        <li class="menu-item ">
-          <a href="">ই-পেপার</a>
-
-        </li>
+      
        
       </ul>
     </div>
    <div class="post">
     <ul class="social-icon">
       <li>
-        <a href="https://www.facebook.com/TheBangladeshToday">
+        <a href="">
           <span class="icon-border">
             <i class="fab fa-facebook-f icon-color"></i>
           </span>
         </a>
       </li>
       <li>
-        <a href="https://www.youtube.com/channel/UCG2M5F-McoWp837K5iMQzQg">
+        <a href="">
           <span class="icon-border">
             <i class="fab fa-youtube icon-color"></i>
           </span>
         </a>
       </li>
       <li>
-        <a href="https://twitter.com/tbt_newspaper">
+        <a href="">
           <span class="icon-border">
             <i class="fab fa-twitter icon-color"></i>
           </span>
         </a>
       </li>
       <li>
-        <a href="https://www.instagram.com/tbt_it/">
+        <a href="">
           <span class="icon-border">
             <i class="fab fa-instagram icon-color"></i>
           </span>
@@ -194,6 +202,7 @@
 
     </ul>
    </div>
+   
    
  
     <!-- -->
@@ -219,7 +228,7 @@
 
             </div>
             <div class="col-8 col-md-11 mblogo">
-              <img src="{{ URL::asset('images/bglogo2.png') }}">
+              <img src="images/bglogo.png">
             </div>
           </div>
         </div>
@@ -231,11 +240,11 @@
         <div class="container">
           <div class="row">
 
-            <div class="col-md-3">
+            <div class="col-md-4">
 
               <ul class="social-icon">
                 <li>
-                  <a href="https://www.facebook.com/TheBangladeshToday">
+                  <a href="">
                     <span class="icon-border">
                       <i class="fab fa-facebook-f icon-color"></i>
                     </span>
@@ -277,16 +286,16 @@
               <img src="{{ URL::asset('images/bglogo2.png') }}">
             </div>
 
-            {{-- <div class="col-md-3 ">
+            <!--<div class="col-md-3 ">
               <div class="log-reg float-right">
-                <a href="{{ route('login') }}" class="logreg-button log-color">
+                <a href="" class="logreg-button log-color">
                   লগইন
                 </a>
-                <a href="{{ route('register') }}" class="logreg-button reg-color">
+                <a href="" class="logreg-button reg-color">
                   রেজিস্টার
                 </a>
               </div>
-            </div> --}}
+            </div>-->
           </div>
         </div>
       </div>
@@ -315,138 +324,135 @@
                   </a>
                 </li>
                 <li class="nav-item dropdown custom-dropdown ">
-                  <a class="nav-link dropdown-toggle ddown" href="http://www.facebook.com" id="navbarDropdownMenuLink" aria-haspopup="true"
+                  <a class="nav-link dropdown-toggle ddown" href="{{route('category',['id'=>43])}}" id="navbarDropdownMenuLink" aria-haspopup="true"
                     aria-expanded="false">
-                    বাংলাদেশ
+                    Bangladesh
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li>
-                      <a class="dropdown-item" href="#">জাতীয়</a>
+                      <a class="dropdown-item" href="#">National</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">রাজনীতি</a>
+                      <a class="dropdown-item" href="#">Politics</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">অর্থ ও বাণিজ্য</a>
+                      <a class="dropdown-item" href="#">Business</a>
                     </li>
 
                   </ul>
                 </li>
                 <li class="nav-item dropdown custom-dropdown ">
-                  <a class="nav-link  ddown" href="#"> দেশজুড়ে</a>
+                  <a class="nav-link  ddown" href="{{route('category',['id'=>44])}}">Nationwide</a>
                 </li>
                 <li class="nav-item dropdown custom-dropdown">
-                  <a class="nav-link dropdown-toggle  ddown" href="http://example.com" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
-                    আন্তর্জাতিক
+                  <a class="nav-link dropdown-toggle  ddown" href="{{route('category',['id'=>45])}}" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                    International
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li>
-                      <a class="dropdown-item" href="#">সারাবিশ্ব</a>
+                      <a class="dropdown-item" href="#">Whole World</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> বিস্ময়কর পৃথিবী</a>
+                      <a class="dropdown-item" href="#"> Wonderful earth</a>
+                  
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">প্রবাস খবর</a>
+                      <a class="dropdown-item" href="#">Exile News</a>
                     </li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown custom-dropdown">
-                  <a class="nav-link dropdown-toggle  ddown" href="http://example.com" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
-                    খেলাধুলা
+                  <a class="nav-link dropdown-toggle  ddown" href="{{route('category',['id'=>46])}}" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                    Sports
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li>
-                      <a class="dropdown-item" href="#"> ক্রিকেট</a>
+                      <a class="dropdown-item" href="#"> Cricket</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> ফুটবল</a>
+                      <a class="dropdown-item" href="#"> Football</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> অন্যান্য</a>
+                      <a class="dropdown-item" href="#"> Others</a>
                     </li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown custom-dropdown">
-                  <a class="nav-link dropdown-toggle  ddown" href="http://example.com" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
-                    বিনোদন
+                  <a class="nav-link dropdown-toggle  ddown" href="{{route('category',['id'=>47])}}" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                    Entertainment
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li>
-                      <a class="dropdown-item" href="#">হলিউড</a>
+                      <a class="dropdown-item" href="#">Hollywood</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> বলিউড</a>
+                      <a class="dropdown-item" href="#"> Bollywood</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">ঢালিউড</a>
+                      <a class="dropdown-item" href="#">Dhallywood</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> টলিউড</a>
+                      <a class="dropdown-item" href="#"> Tollywood</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> ছোট পর্দা</a>
+                      <a class="dropdown-item" href="#"> Small Screen</a>
                     </li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown custom-dropdown custom-dropdown ">
-                  <a class="nav-link dropdown-toggle  ddown" href="http://example.com" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
-                    শিক্ষাঙ্গন
+                  <a class="nav-link dropdown-toggle  ddown" href="{{route('category',['id'=>48])}}" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                    Education
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li>
-                      <a class="dropdown-item" href="#"> শিক্ষা ও সাহিত্য</a>
+                      <a class="dropdown-item" href="#">Education and Literature</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> ক্যাম্পাস নিউজ</a>
+                      <a class="dropdown-item" href="#"> Campus News</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">উচ্চশিক্ষা</a>
+                      <a class="dropdown-item" href="#">Higher Education</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> ফলাফল</a>
+                      <a class="dropdown-item" href="#">Results</a>
                     </li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown custom-dropdown">
-                  <a class="nav-link dropdown-toggle  ddown" href="http://example.com" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
-                    ফিচার
+                  <a class="nav-link dropdown-toggle  ddown" href="{{route('category',['id'=>49])}}" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                 Features
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li class="dropdown-submenu">
-                      <a class="dropdown-item dropdown-toggle" href="#"> জীবনশৈলী</a>
+                      <a class="dropdown-item dropdown-toggle" href="#">Lifestyle</a>
                       <ul class="dropdown-menu">
                         <li>
-                          <a class="dropdown-item rashi" href="#"> রাশিফল</a>
+                          <a class="dropdown-item rashi" href="#">Horoscope</a>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> স্বাস্থ্যকথা</a>
+                      <a class="dropdown-item" href="#"> Health</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> ভ্রমণ</a>
+                      <a class="dropdown-item" href="#"> Travel</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> ধর্ম ও জীবন</a>
+                      <a class="dropdown-item" href="#"> Religion and Life</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> কৃষি ও জীবন</a>
+                      <a class="dropdown-item" href="#">Agriculture and Life</a>
                     </li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown custom-dropdown">
-                  <a class="nav-link  ddown" href="#">ফটো গ্যালারি</a>
+                  <a class="nav-link  ddown" href="{{route('category',['id'=>50])}}">Photo Gallery</a>
                 </li>
+              
                 <li class="nav-item dropdown custom-dropdown">
-                  <a class="nav-link  ddown" href="#">ভিডিও</a>
+                  <a class="nav-link  ddown" href="{{route('category',['id'=>51])}}">Jobs</a>
                 </li>
-                <li class="nav-item dropdown custom-dropdown">
-                  <a class="nav-link  ddown" href="#">চাকরি</a>
-                </li>
-                <li class="nav-item dropdown custom-dropdown">
-                  <a class="nav-link  ddown" href="#"> ই-পেপার</a>
-                </li>
+              
               </ul>
 
             </div>
@@ -456,182 +462,157 @@
         </div>
       </div>
       </div>
+
       <!-- start 3rd header-->
      
       
 <!--end header -->
     
+    <div style="min-height:80vh;">
+      @yield('content')
+    </div>
     
-    @yield('content')
-
    
 <!-- st footer-->
 <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 col-12">
-            <div class="clickable-news">
-              <div class="news-img float-left">
-
-                <i class="fas fa-envelope-open"></i>
-              </div>
-              <div>
-                <h4 class="meta-link email-text">
-                  STAY INFORMED - SUBSCRIBE TO OUR NEWSLETTER
-                </h4>
-
-              </div>
-            </div>
-
-
-          </div>
-          <div class="col-md-5 col-12">
-            <form class="clickable-news" action="">
-              <input type="text" placeholder="" name="subscribe" class="subscribe-text">
-              <button type="submit" value="" class="button-text subscribe-text">Subscribe</button>
-            </form>
-          </div>
-
-          <div class="col-md-3 col-12">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-12">
+          
             <ul class="social-icon">
-              <li>
-                <a href="">
-                  <span class="icon-border">
-                    <i class="fab fa-facebook-f icon-color"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span class="icon-border">
-                    <i class="fab fa-youtube icon-color"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span class="icon-border">
-                    <i class="fab fa-twitter icon-color"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span class="icon-border">
-                    <i class="fab fa-instagram icon-color"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span class="icon-border">
-                    <i class="fab fa-google-plus icon-color"></i>
-                  </span>
-                </a>
-              </li>
+                <li>
+                  <a href="">
+                    <span class="icon-border">
+                      <i class="fab fa-facebook-f icon-color"></i>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="icon-border">
+                      <i class="fab fa-youtube icon-color"></i>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="icon-border">
+                      <i class="fab fa-twitter icon-color"></i>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="icon-border">
+                      <i class="fab fa-instagram icon-color"></i>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="icon-border">
+                      <i class="fab fa-google-plus icon-color"></i>
+                    </span>
+                  </a>
+                </li>
+    
+              </ul>
 
-            </ul>
-          </div>
         </div>
-        <hr>
-        <div class="row">
-          <div class="col-md-3 col-6">
-            <div class="footer-nav">
-              <h2 class="">International</h2>
-              <ul class="vertical-menu">
-                <li>
-                  <a href="">asia pacific</a>
-                </li>
-                <li>
-                  <a href="">asia pacific</a>
-                </li>
-                <li>
-                  <a href="">asia pacific</a>
-                </li>
-                <li>
-                  <a href="">asia pacific</a>
-                </li>
-
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-3 col-6">
-            <div class="footer-nav">
-              <h2 class="">International</h2>
-              <ul class="vertical-menu">
-                <li>
-                  <a href="">asia pacific</a>
-                </li>
-                <li>
-                  <a href="">asia pacific</a>
-                </li>
-                <li>
-                  <a href="">asia pacific</a>
-                </li>
-                <li>
-                  <a href="">asia pacific</a>
-                </li>
-
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-3 col-6">
-            <div class="footer-nav">
-              <h2 class="">International</h2>
-              <ul class="vertical-menu">
-                <li>
-                  <a href="">asia pacific</a>
-                </li>
-                <li>
-                  <a href="">asia pacific</a>
-                </li>
-                <li>
-                  <a href="">asia pacific</a>
-                </li>
-                <li>
-                  <a href="">asia pacific</a>
-                </li>
-
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-3 col-6">
-            <div class="footer-nav">
-              <h2 class="">International</h2>
-              <ul class="vertical-menu">
-                <li>
-                  <a href="">asia pacific</a>
-                </li>
-                <li>
-                  <a href="">asia pacific</a>
-                </li>
-                <li>
-                  <a href="">asia pacific</a>
-                </li>
-                <li>
-                  <a href="">asia pacific</a>
-                </li>
-
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 col-12">
-
-          </div>
-          <div class="col-md-4 col-12">
-            <img src="{{ URL::asset('images/bglogo2.png')}}">
-          </div>
-          <div class="col-md-4 col-12">
-              <p class="credit">Powered by <a href="http://10on10tech.com" target="_blank">10 on 10 Tech Zone</a></p>
-          </div>
+        <div class="col-md-5 col-12">
+          <img src="{{ URL::asset('images/bglogo2.png') }}" style="margin-top:10px">
         </div>
 
+        <div class="col-md-3 col-12">
+        
+        </div>
       </div>
-      
+      <hr>
+      <div class="row">
+       
+        <div class="col-md-4 col-6">
+            <h5 class="meta-link email-text">
+                Director & Publisher: Jobayer alam
+              </h5>
+            <div class="footer-nav">
+                <h2 class="">Contact address</h2>
+                <h5  >
+                   <a href="" class="one-email-text">69/k,KK Bhaban,Green Road, Panthapath, Dhaka-1205</a>
+                  </h5>
+                  <h5 class="one-email-text">+8802-9611884</h5>
+                  <h5  >
+                      <a href="" class="one-email-text">chairman@thebangladeshtoday.com</a>
+                     </h5>
+              </div>
+        </div>
+        <div class="col-md-4 col-6">
+          <div class="footer-nav">
+            
+          
+          </div>
+        </div>
+        <div class="col-md-4 col-6">
+            <div class="footer-nav">
+                <h2 class="">Popular Categories</h2>
+                <ul class="vertical-menu">
+                  <li>
+                    <a href="" class="">National
+                    <span class="float-right number-text">1423</span>
+                  </a>
+                  </li>
+                  <li>
+                    <a href="" class="">Entertainment
+                        <span class="float-right number-text">2023</span>
+                    </a>
+                   
+                  </li>
+                  <li>
+                    <a href="">International
+                        <span class="float-right number-text">883</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">Bangladesh
+                        <span class="float-right number-text">1023</span>
+                    </a>
+                  </li>
+                  <li>
+                      <a href="">Sports
+                          <span class="float-right number-text">2023</span>
+                      </a>
+                    </li>
+                    <li>
+                        <a href="">Nationwide
+                            <span class="float-right number-text">923</span>
+                        </a>
+                      </li>
+                      <li>
+                          <a href="">Bollywood
+                              <span class="float-right number-text">1131</span>
+                          </a>
+                        </li>
+                        <li>
+                            <a href="">Features
+                                <span class="float-right number-text">644</span>
+                            </a>
+                          </li>
+    
+                </ul>
+              </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-12"></div>
+        <div class="col-md-5 ">
+         </div>
+        <div class="col-md-4">
+            <p class="two-email-text float-right">Powered by <a href="http://10on10tech.com" target="_blank" class="two-email-text">10 on 10 Tech Zone</a></p>
+        </div>
+      </div>
+
+
     </div>
-   
+  </div>
 <!-- end footer-->
 </div>
 <!-- end panel div-->
@@ -641,16 +622,21 @@
     </span>
 
     <!-- js libraries  -->
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/popper.min.js') }}"></script>
     <script src="{{ asset('js/slideout.min.js') }}"></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
     <!-- sub category script-->
-    
-
-@yield('js')
+    <script type="text/javascript">
+      $('.menu-dropdown').click(function () {
+        $('.menu-warp').toggle();
+        $('.menu-dropdown').toggleClass('opened');
+      });
+      //now run horizontal menu hover helper
+      //jadewits_horizontal_hover_menu({container:'.main_menu',waittime:500});
+    </script>
 
 </body>
 

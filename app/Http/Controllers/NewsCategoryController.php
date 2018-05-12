@@ -7,6 +7,7 @@ use App\News;
 use App\Tag;
 use App\NewsCategory;
 use JanDrda\LaravelGoogleCustomSearchEngine\LaravelGoogleCustomSearchEngine;
+use Exception;
 
 class NewsCategoryController extends Controller
 {
@@ -19,7 +20,7 @@ class NewsCategoryController extends Controller
                         ->get();
 
         //retrive all the tags
-        $tags = News::existingTags()->pluck('name');
+        //$tags = News::existingTags()->pluck('name');
 
         $category_name = NewsCategory::where('id',$id)
                                         ->get()
@@ -41,7 +42,7 @@ class NewsCategoryController extends Controller
                                 ->get();                        
 
         //dd($featured_news);
-        return view('category', compact('news','tags','subcategories','category_name','featured_news','categorized_news'));
+        return view('category', compact('news','subcategories','category_name','featured_news','categorized_news'));
     }
 
     //return single news page
@@ -91,10 +92,16 @@ class NewsCategoryController extends Controller
         // get next News id
         $next = News::where('id', '>', $id)->get()->first();
 
-        $url = 'https://graph.facebook.com/?id='.url()->current();
-        $content = file_get_contents($url);
-        $json = json_decode($content, true);
-        $share_count = $json['share']['share_count'];
+        try {
+            $url = 'https://graph.facebook.com/?id='.url()->current();
+            $content = file_get_contents($url);
+            $json = json_decode($content, true);
+            $share_count = $json['share']['share_count'];
+          }
+          catch (Exception $e) {
+              $share_count = 0;
+          }
+        
         
         $created_date = BDdate(strtotime($single_news->created_at));
         $updated_date = BDdate(strtotime($single_news->updated_at));
@@ -103,9 +110,9 @@ class NewsCategoryController extends Controller
         $updated_time=BanglaConverter::en2bn(date('h:i',strtotime($single_news->updated_at)));
 
         // gettting all the tags
-        $tags = News::existingTags()->pluck('name');
+        //$tags = News::existingTags()->pluck('name');
 
-        return view('news', compact('single_news','tags','subcategories','previous','next','random_news','simillar','popular','latest','created_time','updated_time','created_date','updated_date','share_count'));
+        return view('news', compact('single_news','subcategories','previous','next','random_news','simillar','popular','latest','created_time','updated_time','created_date','updated_date','share_count'));
     }
 
     public function searchresult()

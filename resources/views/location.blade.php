@@ -8,7 +8,7 @@
         <div class="col-md-12 col-12">
           <a href="">
             <div class="category-name">
-              <h3>{{$category_name->category_name}}</h3>
+              <h3>{{$category_name->name}}</h3>
             </div>
           </a>
         </div>
@@ -33,7 +33,7 @@
                   @foreach($subcategories as $category)
 
                   <li>
-                    <a href="{{route('category',['id'=>$category->id])}}" class="text-color">{{$category->category_name}}</a>
+                    <a href="{{route('category',['id'=>$category->id])}}" class="text-color">{{$category->name}}</a>
                   </li>
 
                   @endforeach 
@@ -52,7 +52,7 @@
               @foreach($subcategories as $category)
 
               <li>
-                <a href="{{route('category',['id'=>$category->id])}}" class="text-color">{{$category->category_name}}</a>
+                <a href="{{url('subDistrict/'.$category->id)}}" class="text-color">{{$category->name}}</a>
               </li>
 
               @endforeach 
@@ -93,37 +93,11 @@
         <div class="col-md-8 col-12">
           <div class="row">
             <div class="col-md-12 col-12">
-              <div class="news-div innercat-news">
-                
-                <div class="row">
-                  @if($featured_news)
-                  <div class="col-md-8 col-12 cat-img">
-                    <div class="img-box">
-                      <a href="" title="">
-                        <img alt="{{str_limit($featured_news->title, 60, '..')}}" src="{{URL::asset('storage/'.str_replace('.jpg','-medium.jpg', $featured_news->image))}}">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-12 ">
-                    <div class=" catnews-link category-name gap-rowright extend-padding">
-                      <h3>
-                        <a href="{{route('news',['id'=>$featured_news->id])}}" title="">
-                          {{str_limit($featured_news->title, 40, '..')}}
-                        </a>
-                      </h3>
-                      <p>
-                          {{str_limit(strip_tags($featured_news->description), 300, '..')}}</p>
-                    </div>
-
-                  </div>
-                
-                  @endif
-                </div>
-              </div>
+              
               <!--first col12-->
               <div class="row">
-                  @if(!$categorized_news->isEmpty() and $categorized_news->count()>0) 
-                  @foreach($categorized_news as $sp_news)
+                  @if(!$allUpozilas->isEmpty() and $allUpozilas->count()>0) 
+                  @foreach($allUpozilas as $sp_news)
                 <!--col 6 pasapasi news-->
                 <div class="col-md-6 col-12">
                   <div class="news-div cat-div">
@@ -154,9 +128,9 @@
             </div>
           </div>
           <!--aro button-->
-          <div class="text-center gap-rowbottom">
-            <button id="more-news">
-              <img alt="" src="" class="animation_image" style="width: 30px; display: none;"> আরও পড়ুন</button>
+          <div class="text-center gap-rowbottom" style="text-align: center;">
+            <div id="more-news" style="margin: 0 auto;">
+               {{$allUpozilas->links()}}</div>
           </div>
           <!--aro button-->
         </div>

@@ -15,73 +15,73 @@ class newscategory extends Seeder
 
         DB::table('news_categories')->insert([
 
-            'parent_id' => 1,
+            'parent_id' => null,
             
-            'category_name' => "বাংলাদেশ",
-            
-        ]);
-
-        DB::table('news_categories')->insert([
-
-            'parent_id' => 1,
-            
-            'category_name' => "দেশজুড়ে",
+            'category_name' => "Bangladesh",
             
         ]);
 
         DB::table('news_categories')->insert([
 
-            'parent_id' => 1,
+            'parent_id' => null,
             
-            'category_name' => "আন্তর্জাতিক",
-            
-        ]);
-
-        DB::table('news_categories')->insert([
-
-            'parent_id' => 1,
-            
-            'category_name' => "খেলাধুলা",
+            'category_name' => "Nationwide",
             
         ]);
 
         DB::table('news_categories')->insert([
 
-            'parent_id' => 1,
+            'parent_id' => null,
             
-            'category_name' => "বিনোদন",
-            
-        ]);
-
-        DB::table('news_categories')->insert([
-
-            'parent_id' => 1,
-            
-            'category_name' => "শিক্ষাঙ্গন",
+            'category_name' => "Internatioal",
             
         ]);
 
         DB::table('news_categories')->insert([
 
-            'parent_id' => 1,
+            'parent_id' => null,
             
-            'category_name' => "ফিচার",
-            
-        ]);
-
-        DB::table('news_categories')->insert([
-
-            'parent_id' => 1,
-            
-            'category_name' => "ফটো গ্যালারি",
+            'category_name' => "Sports",
             
         ]);
 
         DB::table('news_categories')->insert([
 
-            'parent_id' => 1,
+            'parent_id' => null,
             
-            'category_name' => "ভিডিও",
+            'category_name' => "Entertainment",
+            
+        ]);
+
+        DB::table('news_categories')->insert([
+
+            'parent_id' => null,
+            
+            'category_name' => "Education",
+            
+        ]);
+
+        DB::table('news_categories')->insert([
+
+            'parent_id' => null,
+            
+            'category_name' => "Features",
+            
+        ]);
+
+        DB::table('news_categories')->insert([
+
+            'parent_id' => null,
+            
+            'category_name' => "Photo gallery",
+            
+        ]);
+
+        DB::table('news_categories')->insert([
+
+            'parent_id' => null,
+            
+            'category_name' => "Jobs",
             
         ]);
 
