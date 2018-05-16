@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<div style=" min-height: 90vh;">
+
   <script>
     (function() {
       var cx = '008773447388232108985:mcmkcjp1hp0';
@@ -13,6 +13,6 @@
     })();
   </script>
   <gcse:search></gcse:search>
-</div>
+
 
 @endsection

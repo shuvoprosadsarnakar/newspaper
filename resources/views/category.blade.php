@@ -68,21 +68,37 @@
     </div>
   </div>
 </div>
-<div class="category-name">
-  <div class="container">
-    <div class="">
-      <a href="" class="news-date">
-        <span>
-          <i class="fas fa-home"></i>
-        </span>
-        <span>
-          <i class="fas fa-angle-right"></i>
-        </span>
-        <span>
-            {{$category_name->category_name}}
-        </span>
-      </a>
+
+  
+  <div class="category-name gap-rowbottom">
+    <div class="container">
+      <div class="row sublist-category">
+        <div class="col-md-12 col-12">
+          <ul>
+            <li>
+              <a href="" class="icon-color">
+                <i class="fas fa-home"></i>
+              </a>
+            </li>
+            <li>
+              <span>
+                <i class="fas fa-angle-right"></i>
+              </span>
+              <a href="" class="text-muted">
+                <strong>  {{$category_name->category_name}}</strong>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+
+
+      </div>
+
     </div>
+
+
   </div>
 
   <!-- main news-->
@@ -183,13 +199,13 @@
                 <div class="tab-menu">
                   <ul class=" nav-justified">
                     <li class="active second-tab">
-                      <a href="#content14">বিনোদন</a>
+                      <a href="#content14">Entertainment</a>
                     </li>
                     <li class=" second-tab one">
-                      <a href="#content15">খেলাধুলা</a>
+                      <a href="#content15">Sports</a>
                     </li>
                     <li class="second-tab one">
-                        <a href="#content16"> জীবনশৈলী</a>
+                        <a href="#content16">Lifestyle</a>
                       </li>
                   </ul>
                 </div>
@@ -197,12 +213,12 @@
 
                 <!-- Tab panes -->
                 <div class="tab-content" id="content14">
-                  <div class=" multitab-widget-content">
+                  <div class=" multitab-widget-content div-shadow">
 
                     <ul class="media-list">
                       <li class="media">
                         <div class="media-left">
-                          <span>১</span>
+                         
                           <a href="">
                             <img src="images/two.jpg" alt="রাঙ্গামাটিতে ৩ যুবককে অপহরণের অভিযোগ">
                           </a>
@@ -333,18 +349,18 @@
                     </ul>
                     <!--all news-->
                     <div class="allnews">
-                      <a href="" rel="">বিনোদনের সবখবর</a>
+                      <a href="" rel="">All news of Entertainment</a>
                     </div>
                     <!--end all news-->
                   </div>
                 </div>
                 <div class="tab-content" id="content15">
-                  <div class=" multitab-widget-content">
+                  <div class=" multitab-widget-content div-shadow">
 
                     <ul class="media-list">
                       <li class="media">
                         <div class="media-left">
-                          <span>১</span>
+                         
                           <a href="">
                             <img src="http://via.placeholder.com/105x55" alt="রাঙ্গামাটিতে ৩ যুবককে অপহরণের অভিযোগ">
                           </a>
@@ -475,18 +491,18 @@
                     </ul>
                     <!--all news-->
                     <div class="allnews">
-                      <a href="" rel="">খেলাধুলার সবখবর</a>
+                      <a href="" rel="">All news of sports</a>
                     </div>
                     <!--end all news-->
                   </div>
                 </div>
                 <div class="tab-content" id="content16">
-                    <div class=" multitab-widget-content">
+                    <div class=" multitab-widget-content div-shadow">
   
                       <ul class="media-list">
                         <li class="media">
                           <div class="media-left">
-                            <span>১</span>
+                           
                             <a href="">
                               <img src="images/two.jpg" alt="রাঙ্গামাটিতে ৩ যুবককে অপহরণের অভিযোগ">
                             </a>
@@ -617,7 +633,7 @@
                       </ul>
                       <!--all news-->
                       <div class="allnews">
-                        <a href="" rel=""> জীবনশৈলীর সবখবর</a>
+                        <a href="" rel="">All news of lifestyle</a>
                       </div>
                       <!--end all news-->
                     </div>

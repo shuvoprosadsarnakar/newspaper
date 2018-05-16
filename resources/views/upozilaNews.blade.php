@@ -1,12 +1,6 @@
 @extends('layouts.master')
 @section('content')
 
-
-
-
-
-
-
   <!--main news-->
     <div class="container">
       <div class="row">

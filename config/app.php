@@ -151,8 +151,7 @@ return [
          * Package Service Providers...
          */
         \Conner\Tagging\Providers\TaggingServiceProvider::class,
-        \Actuallymab\LaravelComment\LaravelCommentServiceProvider::class,
-        'JanDrda\LaravelGoogleCustomSearchEngine\LaravelGoogleCustomSearchEngineProvider',
+        
 
         /*
          * Application Service Providers...
@@ -210,8 +209,8 @@ return [
         'Storage' => Illuminate\Support\Facades\Storage::class,
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
-        'View' => Illuminate\Support\Facades\View::class,
-        'GoogleCseSearch' => 'JanDrda\LaravelGoogleCustomSearchEngine\Facades\LaravelGoogleCustomSearchEngineProvider'
+        'View' => Illuminate\Support\Facades\View::class
+        
 
     ],
 

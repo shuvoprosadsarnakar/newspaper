@@ -131,7 +131,7 @@
               <!---->
               <div class="singlecategory-portion singlenews-maximg">
                 <div class="singlecategory-portion padding-top15">
-                  <h2>
+                  <h2 class="news-link-font">
                       {{str_limit($single_news->title, 60, '..')}}
                   </h2>
                   <div class="timing-details"></div>
@@ -140,12 +140,12 @@
                       <img alt="জাগো নিউজ ডেস্ক" src="{{URL::asset('storage/'.$s_news->image)}}" class="media-object">
                     </div> --}}
                     <div class="media-body">
-                      <span class="small text-muted time-font">
+                      <span class="small-font text-muted time-font">
                         <i class="fas fa-pencil-alt"></i>
                         <a href="" style="display:inline-block;" rel="nofollow">{{$single_news->author}}</a>
                         <br>
-                        <i class="far fa-clock i-color"></i> প্রকাশিত: {{$created_time}} |
-                        <i class="far  fa-clock i-color"></i> আপডেট: {{$updated_time}}
+                        <i class="far fa-clock i-color"></i> Published: {{$created_time}} |
+                        <i class="far  fa-clock i-color"></i> Update: {{$updated_time}}
                       </span>
                     </div>
                   </div>
@@ -153,34 +153,38 @@
                 <div class=" ">
                   <!---->
                   <div class="social-share">
-                    <div class="share-count float-left">
-                      <span class="share-number">{{$share_count}}</span>
-                      <span>SHARES</span>
+                      <div class="share-count float-left">
+                        <span class="share-number">{{$share_count}}</span>
+                        <span>SHARES</span>
+                      </div>
+                      <ul class="social-icon social-media ">
+                        <li>
+                          <a class="share-button" id="fbook-button" href="https://www.facebook.com/sharer/sharer.php?u={{$current_url}}&amp;title={{$single_news->title}}" target="_blank">
+                            <i class="fab fa-facebook-f  "></i>
+                          </a>
+  
+                        </li>
+                        <li>
+                          <a class="share-button" id="tweet-button" href="http://twitter.com/share?text={{$single_news->title}}&url={{$current_url}}" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                          </a>
+  
+                        </li>
+                        <li>
+                          <a class="share-button" id="gplus-button" href="https://plus.google.com/share?url={{$current_url}}" target="_blank">
+                            <i class="fab fa-google-plus-g"></i>
+                          </a>
+  
+  
+                        </li>
+                        <li>
+                          <button type="button" onclick="myFunction()">
+                            <i class="fas fa-print"></i>
+                          </button>
+                        </li>
+  
+                      </ul>
                     </div>
-                    <ul class="social-icon social-media ">
-                      <li>
-                        <button type="button" onclick="">
-                          <i class="fab fa-facebook-f  "></i>
-                        </button>
-                      </li>
-                      <li>
-                        <button type="button" onclick="">
-                          <i class="fab fa-twitter"></i>
-                        </button>
-                      </li>
-                      <li>
-                        <button type="button" onclick="">
-                          <i class="fab fa-google-plus-g"></i>
-                        </button>
-                      </li>
-                      <li>
-                        <button type="button" onclick="">
-                          <i class="fas fa-print"></i>
-                        </button>
-                      </li>
-
-                    </ul>
-                  </div>
                   <!---->
                 </div>
                 <div class="category-name ">
@@ -191,44 +195,6 @@
                 <div class="singlenews-details">
                     {!! html_entity_decode($single_news->description) !!}
                 </div>
-                <!--share bottom-->
-                <div class="social-share">
-                  <div class="share-count float-left">
-                    <span class="share-number">{{$share_count}}</span>
-                    <span>SHARES</span>
-                  </div>
-                  <ul class="social-icon social-media ">
-                    <li>
-                      <button type="button" onclick="">
-                        <i class="fab fa-facebook-f  "></i>
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button" onclick="">
-                        <i class="fab fa-twitter"></i>
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button" onclick="">
-                        <i class="fab fa-google-plus-g"></i>
-                      </button>
-                    </li>
-
-                    <li>
-                      <button type="button" onclick="">
-                        <i class="fas fa-print"></i>
-                      </button>
-                    </li>
-                
-                    <li>
-                      <button type="button" onclick="">
-                        <i class="fas fa-share-alt"></i>
-                      </button>
-                    </li>
-
-                  </ul>
-                </div>
-                <!--end share bottom-->
                 <!--ad-->
                 <div class="row text-center gap-margintopbottom ">
 
@@ -322,7 +288,7 @@
                 <div class="tab-menu">
                   <ul class=" nav-justified">
                     <li class="active multitab-tab only-tab">
-                      <a href="#content21">{{$single_news->news_categories->category_name}} এর আরও খবর</a>
+                    <a href="#content21"> More news of {{$single_news->news_categories->category_name}}</a>
                     </li>
 
                   </ul>
@@ -331,7 +297,7 @@
 
                 <!-- Tab panes -->
                 <div class="tab-content" id="content21">
-                  <div class=" multitab-widget-content">
+                  <div class=" multitab-widget-content div-shadow">
                     <ul class="media-list">
                       @if(!$simillar->isEmpty())
                       @foreach($simillar as $simnews)
@@ -355,7 +321,7 @@
                     <!--all news-->
                     <div class="allnews">
                       <a href="{{route('category',['id'=>$single_news->news_categories->id])}}"> 
-                        {{$single_news->news_categories->category_name}} এর সবখবর
+                       All news of {{$single_news->news_categories->category_name}} 
                       </a>
                     </div>
                     <!--end all news-->
@@ -400,10 +366,10 @@
                       <div class="tab-menu">
                         <ul class=" nav-justified">
                           <li class="active multitab-tab">
-                            <a href="#content7">সর্বশেষ</a>
+                            <a href="#content7">Latest</a>
                           </li>
                           <li class="multitab-tab one">
-                            <a href="#content8">জনপ্রিয়</a>
+                            <a href="#content8">Popular</a>
                           </li>
                         </ul>
                       </div>
@@ -435,7 +401,7 @@
                           </ul>
                           <!--all news-->
                           <div class="allnews">
-                            <a href="" rel="">আজকের সর্বশেষ সবখবর</a>
+                            <a href="" rel="">Today's All News</a>
                           </div>
                           <!--end all news-->
                         </div>

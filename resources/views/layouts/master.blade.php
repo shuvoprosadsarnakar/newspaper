@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/fontawesome-all.css') }}">
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script async src="{{ asset('js/jquery.min.js') }}"></script>
+    <script async type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5af2c446fe77a30011631596&product=inline-share-buttons"></script>
 
     <title></title>
 </head>
@@ -21,17 +22,9 @@
 <div id="menu">
     <!--slider header menu -->
     <div class="site-info menu-border ">
-      <img src="{{ URL::asset('images/bglogo2.png') }}">
+      <img src="{{ URL::asset('images/bglogo.png') }}">
     </div>
-    <!--<div class="menu-border  secondmenu">
-      <div class="menu-top  post ">
-        <a href="" class="button logreg-button reg-color"> লগইন</a>
-        <a href="" class="button logreg-button reg-color"> রেজিস্টার</a>
-   
-      </div>
-    
-     
-    </div>-->
+
     <div class="mobile_menu_search">
         <form method="" action="">
           <div class=" mobile-search">
@@ -240,50 +233,8 @@
         <div class="container">
           <div class="row">
 
-            <div class="col-md-4">
-
-              <ul class="social-icon">
-                <li>
-                  <a href="">
-                    <span class="icon-border">
-                      <i class="fab fa-facebook-f icon-color"></i>
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <span class="icon-border">
-                      <i class="fab fa-youtube icon-color"></i>
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <span class="icon-border">
-                      <i class="fab fa-twitter icon-color"></i>
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <span class="icon-border">
-                      <i class="fab fa-instagram icon-color"></i>
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <span class="icon-border">
-                      <i class="fab fa-google-plus icon-color"></i>
-                    </span>
-                  </a>
-                </li>
-
-              </ul>
-
-            </div>
-            <div class="col-md-5  logo-img">
-              <img src="{{ URL::asset('images/bglogo2.png') }}">
+            <div class="col-md-3  logo-img">
+              <img src="{{ URL::asset('images/bglogo.png') }}">
             </div>
 
             <!--<div class="col-md-3 ">
@@ -342,7 +293,7 @@
                   </ul>
                 </li>
                 <li class="nav-item dropdown custom-dropdown ">
-                  <a class="nav-link  ddown" href="{{route('category',['id'=>44])}}">Nationwide</a>
+                  <a class="nav-link  ddown" href="{{route('search')}}">Nationwide</a>
                 </li>
                 <li class="nav-item dropdown custom-dropdown">
                   <a class="nav-link dropdown-toggle  ddown" href="{{route('category',['id'=>45])}}" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
@@ -446,7 +397,7 @@
                   </ul>
                 </li>
                 <li class="nav-item dropdown custom-dropdown">
-                  <a class="nav-link  ddown" href="{{route('category',['id'=>50])}}">Photo Gallery</a>
+                  <a class="nav-link  ddown" href="{{route('photos',['id'=>50])}}">Photo Gallery</a>
                 </li>
               
                 <li class="nav-item dropdown custom-dropdown">
@@ -468,152 +419,153 @@
       
 <!--end header -->
     
-    <div style="min-height:80vh;">
+    <div style="min-height:90vh;">
       @yield('content')
     </div>
     
    
 <!-- st footer-->
 <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-12">
-          
-            <ul class="social-icon">
-                <li>
-                  <a href="">
-                    <span class="icon-border">
-                      <i class="fab fa-facebook-f icon-color"></i>
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <span class="icon-border">
-                      <i class="fab fa-youtube icon-color"></i>
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <span class="icon-border">
-                      <i class="fab fa-twitter icon-color"></i>
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <span class="icon-border">
-                      <i class="fab fa-instagram icon-color"></i>
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <span class="icon-border">
-                      <i class="fab fa-google-plus icon-color"></i>
-                    </span>
-                  </a>
-                </li>
-    
-              </ul>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-12">
+        
+          <ul class="social-icon">
+              <li>
+                <a href="">
+                  <span class="icon-border">
+                    <i class="fab fa-facebook-f icon-color"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <span class="icon-border">
+                    <i class="fab fa-youtube icon-color"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <span class="icon-border">
+                    <i class="fab fa-twitter icon-color"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <span class="icon-border">
+                    <i class="fab fa-instagram icon-color"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <span class="icon-border">
+                    <i class="fab fa-google-plus icon-color"></i>
+                  </span>
+                </a>
+              </li>
+  
+            </ul>
 
-        </div>
-        <div class="col-md-5 col-12">
-          <img src="{{ URL::asset('images/bglogo2.png') }}" style="margin-top:10px">
-        </div>
+      </div>
+      <div class="col-md-5 col-12">
+        <img src="{{ URL::asset('images/bglogo2.png') }}" style="margin-top:10px">
+      </div>
 
-        <div class="col-md-3 col-12">
+      <div class="col-md-3 col-12">
+      
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+     
+      <div class="col-md-4 col-12">
+          <h5 class="meta-link email-text">
+             Chairman & Editor : Jobaer Alam
+            </h5>
+          <div class="footer-nav">
+              <h2 class="">Contact address</h2>
+              <h5  >
+                 <a href="" class="one-email-text">69/k,KK Bhaban,Green Road, Panthapath, Dhaka-1205</a>
+                </h5>
+                <h5 class="one-email-text">+8802-9611884</h5>
+                <h5  >
+                    <a href="" class="one-email-text">chairman@thebangladeshtoday.com</a>
+                   </h5>
+            </div>
+      </div>
+      <div class="col-md-4 col-12 footer-margin">
+        <div class="footer-nav">
+          <h2 class="">Most Read</h2>
         
         </div>
       </div>
-      <hr>
-      <div class="row">
-       
-        <div class="col-md-4 col-6">
-            <h5 class="meta-link email-text">
-                Director & Publisher: Jobayer alam
-              </h5>
-            <div class="footer-nav">
-                <h2 class="">Contact address</h2>
-                <h5  >
-                   <a href="" class="one-email-text">69/k,KK Bhaban,Green Road, Panthapath, Dhaka-1205</a>
-                  </h5>
-                  <h5 class="one-email-text">+8802-9611884</h5>
-                  <h5  >
-                      <a href="" class="one-email-text">chairman@thebangladeshtoday.com</a>
-                     </h5>
-              </div>
-        </div>
-        <div class="col-md-4 col-6">
+      <div class="col-md-4 col-12 footer-margin">
           <div class="footer-nav">
-            
-          
-          </div>
-        </div>
-        <div class="col-md-4 col-6">
-            <div class="footer-nav">
-                <h2 class="">Popular Categories</h2>
-                <ul class="vertical-menu">
-                  <li>
-                    <a href="" class="">National
-                    <span class="float-right number-text">1423</span>
+              <h2 class="">Popular Categories</h2>
+              <ul class="vertical-menu">
+                <li>
+                  <a href="" class="">National
+                  <span class="float-right number-text">1423</span>
+                </a>
+                </li>
+                <li>
+                  <a href="" class="">Entertainment
+                      <span class="float-right number-text">2023</span>
                   </a>
-                  </li>
-                  <li>
-                    <a href="" class="">Entertainment
+                 
+                </li>
+                <li>
+                  <a href="">International
+                      <span class="float-right number-text">883</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">Bangladesh
+                      <span class="float-right number-text">1023</span>
+                  </a>
+                </li>
+                <li>
+                    <a href="">Sports
                         <span class="float-right number-text">2023</span>
                     </a>
-                   
                   </li>
                   <li>
-                    <a href="">International
-                        <span class="float-right number-text">883</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">Bangladesh
-                        <span class="float-right number-text">1023</span>
-                    </a>
-                  </li>
-                  <li>
-                      <a href="">Sports
-                          <span class="float-right number-text">2023</span>
+                      <a href="">Nationwide
+                          <span class="float-right number-text">923</span>
                       </a>
                     </li>
                     <li>
-                        <a href="">Nationwide
-                            <span class="float-right number-text">923</span>
+                        <a href="">Bollywood
+                            <span class="float-right number-text">1131</span>
                         </a>
                       </li>
                       <li>
-                          <a href="">Bollywood
-                              <span class="float-right number-text">1131</span>
+                          <a href="">Features
+                              <span class="float-right number-text">644</span>
                           </a>
                         </li>
-                        <li>
-                            <a href="">Features
-                                <span class="float-right number-text">644</span>
-                            </a>
-                          </li>
-    
-                </ul>
-              </div>
-        </div>
+  
+              </ul>
+            </div>
       </div>
-      <div class="row">
-        <div class="col-md-3 col-12"></div>
-        <div class="col-md-5 ">
-         </div>
-        <div class="col-md-4">
-            <p class="two-email-text float-right">Powered by <a href="http://10on10tech.com" target="_blank" class="two-email-text">10 on 10 Tech Zone</a></p>
-        </div>
-      </div>
-
-
     </div>
+    <div class="row">
+      <div class="col-md-3 col-12"></div>
+      <div class="col-md-5 ">
+       </div>
+      <div class="col-md-4 col-12">
+          <p class="two-email-text float-right">Powered by <a href="http://10on10tech.com" target="_blank" class="two-email-text">10 on 10 Tech Zone</a></p>
+      </div>
+    </div>
+
+
   </div>
+</div>
 <!-- end footer-->
+
 </div>
 <!-- end panel div-->
     <!-- back to top -->
@@ -623,11 +575,11 @@
 
     <!-- js libraries  -->
     
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/popper.min.js') }}"></script>
-    <script src="{{ asset('js/slideout.min.js') }}"></script>
-    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script async src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script async src="{{ asset('js/popper.min.js') }}"></script>
+    <script async src="{{ asset('js/slideout.min.js') }}"></script>
+    <script async src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script async src="{{ asset('js/main.js') }}"></script>
     <!-- sub category script-->
     <script type="text/javascript">
       $('.menu-dropdown').click(function () {

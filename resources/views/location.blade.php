@@ -140,7 +140,7 @@
           <div class="text-center">
               <div class="row">
                 <div class="col-md-12 col-12 gap-rowtopbottom">
-                                    <!-- /21655469720/JagoNews_Desktop_Category_RB_A / height:280px; width:336px;-->
+                                    <!-- /21655469720/tbtNews_Desktop_Category_RB_A / height:280px; width:336px;-->
                     <div id="div-gpt-ad-1509258458742-0" style="margin:auto;">
                       <script>
                         googletag.cmd.push(function() { googletag.display('div-gpt-ad-1509258458742-0'); });
@@ -604,7 +604,7 @@
           <div class="text-center">
               <div class="row">
                 <div class="col-md-12 col-12 gap-rowtopbottom">
-                                    <!-- /21655469720/JagoNews_Desktop_Category_RB_A / height:280px; width:336px;-->
+                                    <!-- /21655469720/tbtNews_Desktop_Category_RB_A / height:280px; width:336px;-->
                     <div id="div-gpt-ad-1509258458742-0" style="margin:auto;">
                       <script>
                         googletag.cmd.push(function() { googletag.display('div-gpt-ad-1509258458742-0'); });
@@ -932,7 +932,7 @@
     <div class="container text-center gap-rowtopbottom ">
         <div class="row">
           <div class="col-md-12">
-            <!-- /21655469720/JagoNews_Desktop_Common_Footer / height:90px; width:970px;-->
+            <!-- /21655469720/tbtNews_Desktop_Common_Footer / height:90px; width:970px;-->
             <div id="div-gpt-ad-1509258458742-2" style="margin:auto;">
               <script>
                 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1509258458742-2'); });

@@ -21,23 +21,23 @@ Route::get('/category/{id}', [
     'as'=>'category'
 ]);
 
-Route::get('/category/news/{id}', [
+Route::get('/news/{id}', [
     'uses'=>'NewsCategoryController@news',
     'as'=>'news'
 ]);
 
-Route::get('/tags/news/{tag}', [
+Route::get('/news/tags/{tag}', [
     'uses'=>'NewsTagsController@news',
     'as'=>'tags'
 ]);
 
-Route::get('/photos/news/{id}', [
+Route::get('/news/photos/{id}', [
     'uses'=>'NewsCategoryController@photos',
     'as'=>'photos'
 ]);
 
 /*Mustaque */
-Route::get('/searchFilter', 'SearchController@prodfunct')->name('search');
+Route::get('/location', 'SearchController@prodfunct')->name('search');
 Route::get('/findDistric','SearchController@distric');
 Route::get('/findUpozila','SearchController@findUpozila');
 Route::get('svgDistrict/{id}','SearchController@svgDistrict');

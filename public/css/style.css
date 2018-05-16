@@ -1,9 +1,14 @@
 
+@font-face {
+    font-family: Roboto;
+    src: url(RobotoSlab-Regular.ttf);
+}
 body,
 #panel {
     background-color: #eee;
-    font-family: 'SolaimanLipi', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
+
 
 * {
     margin: 0;
@@ -46,7 +51,7 @@ img {
 }
 
 .button-text {
-    color: white;
+    color: black;
 }
 
 /*mobile menu*/
@@ -177,7 +182,7 @@ img {
 
 .first-header {
     height: 72px;
-    background-color: #1b1e21;
+    background-color: whitesmoke;
 }
 
 .header-bottom {
@@ -193,9 +198,12 @@ img {
 .social-icon {
     padding-top: 20px;
 }
+.first-social-icon {
+    padding-left: 50px;
+}
 
 .icon-color {
-    color: rgb(245, 81, 82);
+    color: white;
 }
 
 .icon-border {
@@ -207,6 +215,9 @@ img {
     height: 35px;
     line-height: 35px;
     border-radius: 50px;
+}
+.first-social-icon .icon-border{
+    background-color: rgb(46, 46, 45);
 }
 
 .social-icon li {
@@ -253,7 +264,7 @@ img {
 
 .second-header {
     height: 72px;
-    background-color: #1b1e21;
+    background-color: white;
 }
 
 /*dropdown menu start*/
@@ -269,11 +280,11 @@ img {
 }
 
 .ddown {
-    color: white;
+    color: black;
 }
 
 .dropdown-item {
-    color: rgb(245, 81, 82);
+    color: black;
     font-size: 17px;
 }
 
@@ -290,7 +301,7 @@ img {
 
 .custom-dropdown:hover .dropdown-menu {
     display: block;
-    background-color: rgb(46, 46, 45);
+    background-color: ghostwhite;
     position: absolute !important;
 }
 
@@ -458,10 +469,11 @@ button:focus,
     font-size:28.8px;
     margin: 0 0 15px;
     line-height: 40px;
+    font-weight:bold;
 }
 
 .news-link p {
-    font-size: 15.2px;
+    font-size: 14.4px;
    
 }
 .catnews-link p{
@@ -496,14 +508,21 @@ button:focus,
 /* for small div*/
 .subnews-div{
     min-height: 245px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+/*updateed*/
+.div-shadow{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
 }
 .subnews-div img, .boldfont-size img{
     height: 131px;
 }
 .news-link h4 {
     margin: 0 0 5px 0;
-    font-size: 16.5px;
-    line-height: 26px;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: bold;
 
    /* padding-bottom: 35px;*/
 }
@@ -541,7 +560,7 @@ button:focus,
     margin-top: 0;
     margin-bottom: 5px;
     line-height: 22px;
-    font-size: 14.5px;
+    font-size: 14.4px;
 }
 .fixing-div .div-padding .media-object {
     width: 105px!important;
@@ -552,9 +571,9 @@ button:focus,
 .media{
     margin-top: 15px;
 }
-.media:first-child {
+/* .media:first-child {
     margin-top: 0;
-}
+} */
 /* end motamot*/
 .gap-rowtop{
     padding-top:25px;
@@ -687,7 +706,7 @@ ul{
     color: #a2a2a2;
 }
 .media .news-body .tabnews-heading {
-    font-size: 14.5px;
+    font-size: 14.4px;
     line-height: 1.35;
 }
 .allnews a {
@@ -756,8 +775,7 @@ ul{
 /*end jonoprio motamot tab*/
 .empty-div{
     padding-top:20px;
-    padding-bottom: 20px;
-   
+    padding-bottom: 20px;  
     margin-bottom: 20px;
 }
 /*st 2nd portion*/
@@ -852,7 +870,7 @@ ul{
 .boldfont-size h4{
     font-weight: bold;
     line-height: 20px;
-    font-size:13.6px;
+    font-size:14.4px;
     margin-bottom: 0;
 
 } 
@@ -1039,7 +1057,7 @@ ul{
 .innerpage-header {
   
     background: #fff;
-    background-image: url(../images/back.png);
+    /* background-image: url(../images/back.png); */
     background-repeat: no-repeat;
     background-position: right;
 }
@@ -1060,11 +1078,11 @@ ul{
 }
 .sublist-category li {
     display: inline-block;
-    font-size:12px;
+    font-size:13.5px;
     
 }
 .innercat-news h3{
-    font-size:24px;
+    font-size:26px;
     line-height:30px;
     margin-bottom:10px
 }
@@ -1080,7 +1098,9 @@ ul{
     height: 90px;
 }
 .cat-div h4{
-    font-size:1em;
+    font-size: 16px;
+    line-height: 23px;
+   
 }
 .cat-img img{
     height: 272px;
@@ -1516,6 +1536,18 @@ ul{
     padding: 10px;
     background-color: white;
 }
+/*new addition*/
+.singlecategory-font .media .news-body .tabnews-heading {
+    font-size: 13.6px;
+    line-height: 1.35;
+}
+.news-link-font{
+    font-weight: bold;
+}
+.small-font{
+    font-size:13.6px;
+}
+/*end new addition*/
 
 @media (min-width: 577px) {
     .category-submenu,
@@ -1524,9 +1556,10 @@ ul{
     .search-header {
         display: none;
     }
+    .footer-margin{
+        margin-top: 15px;
+    }
 }
-
-@media (max-width: 768px) {}
 
 @media (max-width: 1024px) {
     .nav-item {

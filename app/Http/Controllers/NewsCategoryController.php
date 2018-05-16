@@ -92,8 +92,9 @@ class NewsCategoryController extends Controller
         // get next News id
         $next = News::where('id', '>', $id)->get()->first();
 
+        $current_url=url()->current();
         try {
-            $url = 'https://graph.facebook.com/?id='.url()->current();
+            $url = 'https://graph.facebook.com/?id='.$current_url;
             $content = file_get_contents($url);
             $json = json_decode($content, true);
             $share_count = $json['share']['share_count'];
@@ -112,7 +113,18 @@ class NewsCategoryController extends Controller
         // gettting all the tags
         //$tags = News::existingTags()->pluck('name');
 
-        return view('news', compact('single_news','subcategories','previous','next','random_news','simillar','popular','latest','created_time','updated_time','created_date','updated_date','share_count'));
+        return view('news', compact('current_url','single_news','subcategories','previous','next','random_news','simillar','popular','latest','created_time','updated_time','created_date','updated_date','share_count'));
+    }
+
+    public function photos()
+    {
+        $news = News::with('news_categories','tagged')
+                        ->where('newscategory_id',$id)
+                        ->take(4)
+                        ->get();
+
+        //dd($request->search);
+        return view('photos');
     }
 
     public function searchresult()

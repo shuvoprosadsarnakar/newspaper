@@ -34,7 +34,7 @@ class SearchController extends Controller
         //if our chosen id and products table prod_cat_id col match the get first 100 data 
 
         //$request->id here is the id of our chosen option id
-        $data=District::select('name','id')->where('divison_id',$request->id)->take(100)->get();
+        $data=District::select('name','id')->where('division_id',$request->id)->take(100)->get();
         return response()->json($data);//then sent this data to ajax success
     }
 
@@ -68,7 +68,7 @@ class SearchController extends Controller
 
     public function svgDistrict($id){
         $findUpozilaId=Upozila::select('id')->where('district_id',$id)->pluck('id');
-        $allUpozilas=News::whereIn('upozila_id',$findUpozilaId)->simplePaginate(10);;
+        $allUpozilas=News::whereIn('upozila_id',$findUpozilaId)->simplePaginate(10);
 
         $news = News::with('news_categories','tagged')
                         //->where('newscategory_id',$id)
