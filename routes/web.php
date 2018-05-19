@@ -40,8 +40,8 @@ Route::get('/news/photos/{id}', [
 Route::get('/location', 'SearchController@prodfunct')->name('search');
 Route::get('/findDistric','SearchController@distric');
 Route::get('/findUpozila','SearchController@findUpozila');
-Route::get('svgDistrict/{id}','SearchController@svgDistrict');
-Route::post('/getdata','SearchController@getdata')->name('getdata');
+Route::get('All/Bangladesh/{name}','SearchController@svgDistrict');
+Route::get('/Bangladesh/{name}','SearchController@getdata')->name('getdata');
 Route::get('subDistrict/{id}','SearchController@Subdistrict');
 
 

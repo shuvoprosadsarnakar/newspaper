@@ -51,7 +51,7 @@ img {
 }
 
 .button-text {
-    color: black;
+    color: white;
 }
 
 /*mobile menu*/
@@ -264,7 +264,7 @@ img {
 
 .second-header {
     height: 72px;
-    background-color: white;
+    background-color: maroon;
 }
 
 /*dropdown menu start*/
@@ -280,7 +280,7 @@ img {
 }
 
 .ddown {
-    color: black;
+    color: white;
 }
 
 .dropdown-item {
@@ -996,7 +996,7 @@ ul{
 /*carsoul testimonls end*/
 
 .footer {
-    background-color: #1b1e21;
+    background-color:white;
     padding-bottom: 30px;
 }
 

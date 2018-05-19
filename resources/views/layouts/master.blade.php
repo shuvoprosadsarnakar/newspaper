@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+    <title> 
+        The Bangladesh Today
+    </title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,8 +16,9 @@
     <link rel="stylesheet" href="{{ asset('css/fontawesome-all.css') }}">
     <script async src="{{ asset('js/jquery.min.js') }}"></script>
     <script async type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5af2c446fe77a30011631596&product=inline-share-buttons"></script>
+    
+    @yield('headerlib')
 
-    <title></title>
 </head>
 
 <body>
@@ -275,19 +279,19 @@
                   </a>
                 </li>
                 <li class="nav-item dropdown custom-dropdown ">
-                  <a class="nav-link dropdown-toggle ddown" href="{{route('category',['id'=>43])}}" id="navbarDropdownMenuLink" aria-haspopup="true"
+                  <a class="nav-link dropdown-toggle ddown" href="{{route('category',['id'=>'bangladesh'])}}" id="navbarDropdownMenuLink" aria-haspopup="true"
                     aria-expanded="false">
                     Bangladesh
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li>
-                      <a class="dropdown-item" href="#">National</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'National'])}}">National</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Politics</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Politics'])}}">Politics</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Business</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Business'])}}">Business</a>
                     </li>
 
                   </ul>
@@ -296,112 +300,112 @@
                   <a class="nav-link  ddown" href="{{route('search')}}">Nationwide</a>
                 </li>
                 <li class="nav-item dropdown custom-dropdown">
-                  <a class="nav-link dropdown-toggle  ddown" href="{{route('category',['id'=>45])}}" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle  ddown" href="{{route('category',['id'=>'International'])}}" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
                     International
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li>
-                      <a class="dropdown-item" href="#">Whole World</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Whole World'])}}">Whole World</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> Wonderful earth</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Wonderful earth'])}}"> Wonderful earth</a>
                   
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Exile News</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Exile News'])}}">Exile News</a>
                     </li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown custom-dropdown">
-                  <a class="nav-link dropdown-toggle  ddown" href="{{route('category',['id'=>46])}}" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle  ddown" href="{{route('category',['id'=>'Sports'])}}" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
                     Sports
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li>
-                      <a class="dropdown-item" href="#"> Cricket</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Cricket'])}}"> Cricket</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> Football</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Football'])}}"> Football</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> Others</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Others'])}}"> Others</a>
                     </li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown custom-dropdown">
-                  <a class="nav-link dropdown-toggle  ddown" href="{{route('category',['id'=>47])}}" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle  ddown" href="{{route('category',['id'=>'Entertainment'])}}" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
                     Entertainment
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li>
-                      <a class="dropdown-item" href="#">Hollywood</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Hollywood'])}}">Hollywood</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> Bollywood</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Bollywood'])}}"> Bollywood</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Dhallywood</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Dhallywood'])}}">Dhallywood</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> Tollywood</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Tollywood'])}}"> Tollywood</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> Small Screen</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Small Screen'])}}"> Small Screen</a>
                     </li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown custom-dropdown custom-dropdown ">
-                  <a class="nav-link dropdown-toggle  ddown" href="{{route('category',['id'=>48])}}" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle  ddown" href="{{route('category',['id'=>'Education'])}}" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
                     Education
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li>
-                      <a class="dropdown-item" href="#">Education and Literature</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Education'])}}">Education and Literature</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> Campus News</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Campus'])}}"> Campus News</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Higher Education</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Education'])}}">Higher Education</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Results</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Results'])}}">Results</a>
                     </li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown custom-dropdown">
-                  <a class="nav-link dropdown-toggle  ddown" href="{{route('category',['id'=>49])}}" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle  ddown" href="{{route('category',['id'=>'Features'])}}" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
                  Features
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li class="dropdown-submenu">
-                      <a class="dropdown-item dropdown-toggle" href="#">Lifestyle</a>
+                      <a class="dropdown-item dropdown-toggle" href="{{route('category',['id'=>'Lifestyle'])}}">Lifestyle</a>
                       <ul class="dropdown-menu">
                         <li>
-                          <a class="dropdown-item rashi" href="#">Horoscope</a>
+                          <a class="dropdown-item rashi" href="{{route('category',['id'=>'Horoscope'])}}">Horoscope</a>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> Health</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Health'])}}"> Health</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> Travel</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Travel'])}}"> Travel</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"> Religion and Life</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Religion'])}}"> Religion and Life</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Agriculture and Life</a>
+                      <a class="dropdown-item" href="{{route('category',['id'=>'Agriculture'])}}">Agriculture and Life</a>
                     </li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown custom-dropdown">
-                  <a class="nav-link  ddown" href="{{route('photos',['id'=>50])}}">Photo Gallery</a>
+                  <a class="nav-link  ddown" href="{{route('category',['id'=>'Photo'])}}">Photo Gallery</a>
                 </li>
               
                 <li class="nav-item dropdown custom-dropdown">
-                  <a class="nav-link  ddown" href="{{route('category',['id'=>51])}}">Jobs</a>
+                  <a class="nav-link  ddown" href="{{route('category',['id'=>'Jobs'])}}">Jobs</a>
                 </li>
               
               </ul>
@@ -428,50 +432,9 @@
 <div class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-md-3 col-12">
-        
-          <ul class="social-icon">
-              <li>
-                <a href="">
-                  <span class="icon-border">
-                    <i class="fab fa-facebook-f icon-color"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span class="icon-border">
-                    <i class="fab fa-youtube icon-color"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span class="icon-border">
-                    <i class="fab fa-twitter icon-color"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span class="icon-border">
-                    <i class="fab fa-instagram icon-color"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span class="icon-border">
-                    <i class="fab fa-google-plus icon-color"></i>
-                  </span>
-                </a>
-              </li>
-  
-            </ul>
 
-      </div>
       <div class="col-md-5 col-12">
-        <img src="{{ URL::asset('images/bglogo2.png') }}" style="margin-top:10px">
+        <img src="{{ URL::asset('images/bglogo.png') }}" style="margin-top:10px">
       </div>
 
       <div class="col-md-3 col-12">
@@ -498,58 +461,12 @@
       </div>
       <div class="col-md-4 col-12 footer-margin">
         <div class="footer-nav">
-          <h2 class="">Most Read</h2>
+          <h2 class=""></h2>
         
         </div>
       </div>
       <div class="col-md-4 col-12 footer-margin">
-          <div class="footer-nav">
-              <h2 class="">Popular Categories</h2>
-              <ul class="vertical-menu">
-                <li>
-                  <a href="" class="">National
-                  <span class="float-right number-text">1423</span>
-                </a>
-                </li>
-                <li>
-                  <a href="" class="">Entertainment
-                      <span class="float-right number-text">2023</span>
-                  </a>
-                 
-                </li>
-                <li>
-                  <a href="">International
-                      <span class="float-right number-text">883</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="">Bangladesh
-                      <span class="float-right number-text">1023</span>
-                  </a>
-                </li>
-                <li>
-                    <a href="">Sports
-                        <span class="float-right number-text">2023</span>
-                    </a>
-                  </li>
-                  <li>
-                      <a href="">Nationwide
-                          <span class="float-right number-text">923</span>
-                      </a>
-                    </li>
-                    <li>
-                        <a href="">Bollywood
-                            <span class="float-right number-text">1131</span>
-                        </a>
-                      </li>
-                      <li>
-                          <a href="">Features
-                              <span class="float-right number-text">644</span>
-                          </a>
-                        </li>
-  
-              </ul>
-            </div>
+          
       </div>
     </div>
     <div class="row">
@@ -590,6 +507,7 @@
       //jadewits_horizontal_hover_menu({container:'.main_menu',waittime:500});
     </script>
 
+    @yield('footerlib')
 </body>
 
 </html>

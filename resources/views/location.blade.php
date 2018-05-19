@@ -48,7 +48,7 @@
           <div class="topic">
 
             <ul class="menu">
-              @if(!$subcategories->isEmpty() and $subcategories->count()>0) 
+              {{-- @if(!$subcategories->isEmpty() and $subcategories->count()>0) 
               @foreach($subcategories as $category)
 
               <li>
@@ -56,7 +56,7 @@
               </li>
 
               @endforeach 
-              @endif
+              @endif --}}
             </ul>
           </div>
         </div>
@@ -78,9 +78,9 @@
         <span>
           <i class="fas fa-angle-right"></i>
         </span>
-        <span>
+        {{-- <span>
             {{$category_name->category_name}}
-        </span>
+        </span> --}}
       </a>
     </div>
   </div>

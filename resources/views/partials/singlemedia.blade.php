@@ -1,3 +1,4 @@
+@if(!$news->isEmpty() and $news->count()>1) 
 <div class="col-md-3 col-12 ">
 
         <div class="">
@@ -8,23 +9,25 @@
           <!--news-->
 
           <div class="singlecategory-portion div-shadow">
-            @if(!$news->isEmpty() and $news->count()>1)
+            @if(!$news->isEmpty() and $news->count()>0)
             <div class=" boldfont-size ">
               <div class="img-position">
-                <a href=" {{route('news',['id'=>$news[1]->id])}} ">
-                  <img src="{{URL::asset('storage/'.$news[1]->image)}}" alt="">
+                <a href=" {{route('news',['id'=>$news[0]->id])}} ">
+                  <img src="{{URL::asset('storage/'.$news[0]->image)}}" alt="">
                 </a>
               </div>
               <div class="news-link reduce-height">
                 <h4>
-                  <a href="{{route('news',['id'=>$news[1]->id])}}">
+                  <a href="{{route('news',['id'=>$news[0]->id])}}">
                     {{str_limit($news[1]->title, 60, '..')}}
                   </a>
                 </h4>
               </div>
             </div>
-            @endif @if(!$motamotnews->isEmpty() and $motamotnews->count()>3) 
-            @foreach($motamotnews as $sp_news)
+            @endif 
+            @if(!$news->isEmpty() and $news->count()>1) 
+            @foreach($news as $sp_news)
+            @if ($loop->first) @continue @endif
             <!---->
             <div class="vertical-category">
               <div class="media">
@@ -53,3 +56,4 @@
           <a href="" rel=""> All news</a>
         </div>
       </div>
+      @endif 

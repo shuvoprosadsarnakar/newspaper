@@ -25,7 +25,6 @@ class SearchController extends Controller
 
         $division=Division::all();//get data from table
         return view('searchFilter',compact('division'));//sent data to view
-
     }
 
     public function distric(Request $request){
@@ -47,11 +46,51 @@ class SearchController extends Controller
         return response()->json($p);
     }
 
-    public function getdata(Request $request){
-    	$getUpozilaId=$request->input('upozila');
-    	$news=News::where('upozila_id',$getUpozilaId)->simplePaginate(10);
-    	//dd($news);
-    	return view('upozilaNews',compact('news'));
+    public function getdata($name){
+        $getUpozilaId=Upozila::where('name',$name)->value('id');
+        $id=Upozila::where('name',$name)->value('id');
+        $allUpozilas=News::where('upozila_id',$getUpozilaId)->simplePaginate(10);
+
+        $news = News::with('news_categories','tagged')
+                        //->where('newscategory_id',$id)
+                        ->take(4)
+                        ->get();
+
+        //retrive all the tags
+        $tags = News::existingTags()->pluck('name');
+
+        $category_name = Division::where('id',$id)
+                                        ->get()
+                                        ->first();
+
+        $subcategories = Upozila::where('divison_id',$id)
+                                        ->take(6)
+                                        ->get();
+        
+        $featured_news = News::with('news_categories')
+                                ->where('newscategory_id',$id)
+                                ->where('featured',1)
+                                ->get() 
+                                ->first();
+
+        $categorized_news = News::with('news_categories')
+                                ->where('newscategory_id',$id)
+                                ->take(8)
+                                ->get();                        
+        //dd($sports_news);
+        $popularnews = News::with('news_categories','tagged')
+                    ->take(6)
+                    ->get();
+            
+        // getting the latest news
+        $latestnews = News::with('news_categories','tagged')
+                        ->take(6)
+                        ->get();
+
+        //dd($featured_news);
+        return view('divisionNews', compact('popularnews','latestnews','allUpozilas','news','tags','subcategories','category_name','featured_news'));
+
+    	//return view('upozilaNews',compact('news'));
 
     }
 
@@ -66,8 +105,15 @@ class SearchController extends Controller
 
     }
 
-    public function svgDistrict($id){
-        $findUpozilaId=Upozila::select('id')->where('district_id',$id)->pluck('id');
+    public function feachIdToUpozila(Request $request){
+        $q=Upozila::select('name')->where('id',$request->id)->pluck()->first();
+        dd($q);
+        return response()->json($p);
+    }
+
+    public function svgDistrict($name){
+        $id=Division::where('name',$name)->value('id');
+        $findUpozilaId=Upozila::select('id')->where('divison_id',$id)->pluck('id');
         $allUpozilas=News::whereIn('upozila_id',$findUpozilaId)->simplePaginate(10);
 
         $news = News::with('news_categories','tagged')
@@ -78,11 +124,11 @@ class SearchController extends Controller
         //retrive all the tags
         $tags = News::existingTags()->pluck('name');
 
-        $category_name = District::where('id',$id)
+        $category_name = Division::where('id',$id)
                                         ->get()
                                         ->first();
 
-        $subcategories = Upozila::where('district_id',$id)
+        $subcategories = Upozila::where('divison_id',$id)
                                         ->take(7)
                                         ->get();
         

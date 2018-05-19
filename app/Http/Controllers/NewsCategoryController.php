@@ -23,26 +23,50 @@ class NewsCategoryController extends Controller
         //$tags = News::existingTags()->pluck('name');
 
         $category_name = NewsCategory::where('id',$id)
-                                        ->get()
-                                        ->first();
-
+                                    ->orWhere('category_name', 'like', '%'.$id.'%')
+                                    ->get()
+                                    ->first();
+        if($category_name){
         $subcategories = NewsCategory::where('parent_id',$id)
-                                        ->take(5)
-                                        ->get();
-        
+                                    ->orWhere('category_name', 'like', '%'.$category_name->name.'%')
+                                    ->take(5)
+                                    ->get();
+        }
+        else{
+        $subcategories = null;
+        }
         $featured_news = News::with('news_categories')
                                 ->where('newscategory_id',$id)
                                 ->where('featured',1)
                                 ->get() 
                                 ->first();
 
+        // $categorized_news = News::with('news_categories')
+        //                         ->where('newscategory_id',$id)
+        //                         ->take(8)
+        //                         ->get();     
+        //dd($id);
         $categorized_news = News::with('news_categories')
-                                ->where('newscategory_id',$id)
-                                ->take(8)
-                                ->get();                        
+                            ->whereHas('news_categories', function($q) use($id)
+                            {
+                                $q->Where('category_name', 'like', '%'.$id.'%');
+                            })
+                            ->take(8)
+                            ->simplePaginate(10);
 
-        //dd($featured_news);
-        return view('category', compact('news','subcategories','category_name','featured_news','categorized_news'));
+        //dd($sports_news);
+        $popularnews = News::with('news_categories','tagged')
+                    ->take(6)
+                    ->get();
+            
+        // getting the latest news
+        $latestnews = News::with('news_categories','tagged')
+                        ->orderBy('date', 'desc')
+                        ->take(6)
+                        ->get();
+
+        //dd($categorized_news);
+        return view('category', compact('popularnews','latestnews','news','subcategories','category_name','featured_news','categorized_news'));
     }
 
     //return single news page
@@ -52,33 +76,38 @@ class NewsCategoryController extends Controller
         // getting the selected single news
         $single_news = News::with('news_categories','tagged')
                         ->where('id',$id)
+                        ->orwhere('title','like','%'.$id.'%')
                         ->get()
                         ->first();
-        
-        $subcategories = NewsCategory::where('parent_id',$single_news->newscategory_id)
+        if($single_news){
+            $subcategories = NewsCategory::where('parent_id',$single_news->newscategory_id)
                         ->take(7)
                         ->get();
 
+            // getting the simillar news
+            $simillar = News::with('news_categories')
+                    ->where('newscategory_id',$single_news->newscategory_id)
+                    ->where('id','!=',$id)
+                    ->take(8)
+                    ->get();            
+        }
+        else{
+            $subcategories = null;
+            $simillar = null;
+        }
 
-        // getting the simillar news
-        $simillar = News::with('news_categories')
-                        ->where('newscategory_id',$single_news->newscategory_id)
-                        ->where('id','!=',$id)
-                        ->take(8)
-                        ->get();
+        
 
         // getting the latest news
-        $latest = News::with('news_categories')
-                        ->where('newscategory_id',$single_news->newscategory_id)
-                        ->where('id','!=',$id)
-                        ->take(8)
-                        ->get();
-
-        // getting the popular news
-        $popular = News::with('news_categories')
-                        ->where('newscategory_id',$single_news->newscategory_id)
-                        ->where('id','!=',$id)
-                        ->take(8)
+        //dd($sports_news);
+        $popularnews = News::with('news_categories','tagged')
+                    ->take(6)
+                    ->get();
+            
+        // getting the latest news
+        $latestnews = News::with('news_categories','tagged')
+                        ->orderBy('date', 'desc')
+                        ->take(6)
                         ->get();
         
         // getting random news 
@@ -104,16 +133,16 @@ class NewsCategoryController extends Controller
           }
         
         
-        $created_date = BDdate(strtotime($single_news->created_at));
-        $updated_date = BDdate(strtotime($single_news->updated_at));
+        // $created_date = BDdate(strtotime($single_news->created_at));
+        // $updated_date = BDdate(strtotime($single_news->updated_at));
 
-        $created_time=BanglaConverter::en2bn(date('h:i',strtotime($single_news->created_at)));
-        $updated_time=BanglaConverter::en2bn(date('h:i',strtotime($single_news->updated_at)));
+        // $created_time=BanglaConverter::en2bn(date('h:i',strtotime($single_news->created_at)));
+        // $updated_time=BanglaConverter::en2bn(date('h:i',strtotime($single_news->updated_at)));
 
         // gettting all the tags
         //$tags = News::existingTags()->pluck('name');
 
-        return view('news', compact('current_url','single_news','subcategories','previous','next','random_news','simillar','popular','latest','created_time','updated_time','created_date','updated_date','share_count'));
+        return view('news', compact('current_url','single_news','subcategories','previous','next','random_news','simillar','popular','latest','share_count'));
     }
 
     public function photos()

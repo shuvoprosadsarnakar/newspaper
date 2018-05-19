@@ -1,13 +1,19 @@
 @extends('layouts.master')
+
+@section('headerlib')
+
+@endsection
+
 @section('content')
 
+@if($single_news)
 <div class="innerpage-header ">
     <div class="first-category sub-category">
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-12">
 
-            <a href="{{route('category',['id'=>$single_news->news_categories->id])}}">
+            <a href="{{route('category',['id'=>$single_news->news_categories->category_name])}}">
               <div class="category-name">
                 <h3>{{$single_news->news_categories->category_name}}</h3>
               </div>
@@ -33,7 +39,7 @@
                       @foreach($subcategories as $category)
         
                       <li>
-                        <a href="{{route('category',['id'=>$category->id])}}" class="text-color">{{$category->category_name}}</a>
+                        <a href="{{route('category',['id'=>$category->category_name])}}" class="text-color">{{$category->category_name}}</a>
                       </li>
         
                       @endforeach 
@@ -52,7 +58,7 @@
                   @foreach($subcategories as $category)
     
                   <li>
-                    <a href="{{route('category',['id'=>$category->id])}}" class="text-color">{{$category->category_name}}</a>
+                    <a href="{{route('category',['id'=>$category->category_name])}}" class="text-color">{{$category->category_name}}</a>
                   </li>
     
                   @endforeach 
@@ -74,7 +80,7 @@
         <div class="col-md-12 col-12">
           <ul>
             <li>
-              <a href="" class="i-color">
+              <a href="{{route('home')}}" class="i-color">
                 <i class="fas fa-home"></i>
               </a>
             </li>
@@ -82,16 +88,10 @@
               <span>
                 <i class="fas fa-angle-right"></i>
               </span>
-              <a href="" class="text-muted">
-                <strong>বাংলাদেশ</strong>
-              </a>
-            </li>
-            <li>
-              <span>
-                <i class="fas fa-angle-right"></i>
-              </span>
-              <a href="" class="text-muted">
-                <strong>দেশজুড়ে</strong>
+              <a href="{{route('category',['id'=>$single_news->news_categories->category_name])}}" class="text-muted">
+                <strong>
+                  {{$single_news->news_categories->category_name}}
+                </strong>
               </a>
             </li>
           </ul>
@@ -144,8 +144,8 @@
                         <i class="fas fa-pencil-alt"></i>
                         <a href="" style="display:inline-block;" rel="nofollow">{{$single_news->author}}</a>
                         <br>
-                        <i class="far fa-clock i-color"></i> Published: {{$created_time}} |
-                        <i class="far  fa-clock i-color"></i> Update: {{$updated_time}}
+                        <i class="far fa-clock i-color"></i> Published at: {{ date('d, F Y', strtotime($single_news->created_at)) }}&nbsp;{{ date('h:i A', strtotime($single_news->created_at)) }} |
+                        <i class="far  fa-clock i-color"></i> Updated at: {{ date('d, F Y', strtotime($single_news->updated_at)) }}&nbsp;{{ date('h:i A', strtotime($single_news->updated_at)) }}
                       </span>
                     </div>
                   </div>
@@ -228,8 +228,8 @@
                     <div class="col-md-12 col-12">
                         <h2 class="title">
                             <a href="">
-                                আরও পড়ুন  
-                                </a>
+                                More news  
+                            </a>
                             <span class="double-border"></span>
                           </h2>
                     </div>
@@ -475,5 +475,9 @@
       <!-- end post news-->
       
   </div>
-
+  @else
+  <div class="row justify-content-center">
+  <h1>not found</h1>
+  </div>
+@endif
 @endsection
